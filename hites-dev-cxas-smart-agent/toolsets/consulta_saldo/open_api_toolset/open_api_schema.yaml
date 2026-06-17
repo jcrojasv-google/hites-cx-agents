@@ -1,0 +1,58 @@
+openapi: 3.0.3
+info:
+  title: Consulta de Saldo Hites
+  description: Servicio para consultar el cupo y saldo de un cliente utilizando RUT y PIN.
+  version: 1.0.0
+servers:
+  - url: $env_var
+    description: Servidor de Consulta de Saldo
+paths:
+  /:
+    post:
+      summary: Consultar Saldo y Cupo
+      operationId: consultarSaldo
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                rut:
+                  type: string
+                  description: RUT del cliente.
+                  example: "215030733"
+                pinsaldo:
+                  type: string
+                  description: PIN de seguridad para la consulta.
+                  example: "1234"
+      responses:
+        '200':
+          description: Respuesta con los saldos del cliente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WebhookResponse'
+components:
+  schemas:
+    WebhookResponse:
+      type: object
+      properties:
+        session_info:
+          type: object
+          properties:
+            parameters:
+              type: object
+              properties:
+                codigoRespuestaDeuda:
+                  type: string
+                  description: Código de estado de la consulta.
+                nombreCliente:
+                  type: string
+                  description: Nombre completo del cliente.
+                cupo:
+                  type: string
+                  description: Cupo total disponible.
+                saldo:
+                  type: string
+                  description: Saldo adeudado o actual.

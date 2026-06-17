@@ -1,0 +1,17 @@
+{
+  "name": "83dd0171-a8b3-4593-be2c-eb960a1ec99d",
+  "dataStoreTool": {
+    "name": "pdf_retiro_alternativos",
+    "engineSource": {
+      "dataStoreSources": [{
+        "dataStore": {
+          "name": "$env_var",
+          "engineType": "CHAT_ENGINE"
+        }
+      }]
+    },
+    "filterParameterBehavior": "NEVER_INCLUDE"
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "pdf_retiro_alternativos"
+}

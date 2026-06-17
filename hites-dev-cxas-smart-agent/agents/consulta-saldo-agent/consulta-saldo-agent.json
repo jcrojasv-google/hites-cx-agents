@@ -1,0 +1,10 @@
+{
+  "name": "af46cc54-db2e-4ba0-bedb-812d0b5dc7be",
+  "displayName": "consulta-saldo-agent",
+  "instruction": "agents/consulta-saldo-agent/instruction.txt",
+  "tools": ["end_session"],
+  "toolsets": [{
+    "toolset": "consulta_saldo",
+    "toolIds": ["consultarSaldo"]
+  }]
+}

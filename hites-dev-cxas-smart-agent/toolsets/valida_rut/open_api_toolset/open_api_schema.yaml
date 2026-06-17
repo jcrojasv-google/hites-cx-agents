@@ -1,0 +1,48 @@
+openapi: 3.0.3
+info:
+  title: Validador de RUT Webhook
+  description: Servicio para validar RUTs chilenos vía Cloud Run.
+  version: 1.0.0
+servers:
+  - url: $env_var
+    description: Servidor de producción Cloud Run
+paths:
+  /:
+    post:
+      summary: Validar RUT
+      operationId: validarRut
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                rut:
+                  type: string
+                  description: El RUT a validar (sin puntos ni guion).
+                  example: "156297518"
+      responses:
+        '200':
+          description: Respuesta exitosa con información de sesión
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WebhookResponse'
+components:
+  schemas:
+    WebhookResponse:
+      type: object
+      properties:
+        session_info:
+          type: object
+          properties:
+            parameters:
+              type: object
+              properties:
+                rut:
+                  type: string
+                rut_valido:
+                  type: boolean
+                intentos_fallidos:
+                  type: integer

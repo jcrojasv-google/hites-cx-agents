@@ -1,0 +1,17 @@
+{
+  "name": "c42f15e8-09a9-4ea0-a8a1-5e3e53df54de",
+  "dataStoreTool": {
+    "name": "txt_base_conocimientos",
+    "engineSource": {
+      "dataStoreSources": [{
+        "dataStore": {
+          "name": "$env_var",
+          "engineType": "CHAT_ENGINE"
+        }
+      }]
+    },
+    "filterParameterBehavior": "NEVER_INCLUDE"
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "txt_base_conocimientos"
+}

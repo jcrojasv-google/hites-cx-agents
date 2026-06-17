@@ -1,0 +1,60 @@
+openapi: 3.0.0
+info:
+  title: Hites Order Tracking Tool
+  description: Herramienta para consultar el estado de seguimiento de un pedido de Hites mediante el número de orden (boleta/orden).
+  version: 1.0.0
+servers:
+  - url: $env_var
+    description: Servidor de producción en Google Cloud Run Functions
+paths:
+  /:
+    post:
+      summary: Consultar seguimiento de orden
+      description: Envía un número de orden para obtener el estado actual de despacho, fecha de entrega y detalles del proceso.
+      operationId: trackOrder
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                boletaOrden:
+                  type: string
+                  description: El número de orden o boleta a consultar (ej. 24206616).
+              required:
+                - boletaOrden
+      responses:
+        '200':
+          description: Respuesta exitosa con la información de seguimiento.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  sessionInfo:
+                    type: object
+                    properties:
+                      parameters:
+                        type: object
+                        properties:
+                          tracking_found:
+                            type: boolean
+                          fechaEntregaOrden:
+                            type: string
+                          pasoOrden:
+                            type: integer
+                          estadoOrden:
+                            type: string
+                          detalleOrden:
+                            type: string
+                          colorOrden:
+                            type: string
+                          fechaEstadoOrden:
+                            type: string
+                          orden:
+                            type: string
+        '400':
+          description: Error en la petición.
+        '500':
+          description: Error interno del servidor.

@@ -1,0 +1,9 @@
+{
+  "name": "f915ce30-1767-48f3-972a-a4eade7b4448",
+  "pythonFunction": {
+    "name": "transfer_agent",
+    "pythonCode": "tools/transfer_agent/python_function/python_code.py"
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "transfer_agent"
+}

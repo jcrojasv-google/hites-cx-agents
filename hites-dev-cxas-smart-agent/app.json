@@ -1,0 +1,111 @@
+{
+  "name": "fa3de984-bac0-48f0-976f-1e1713491337",
+  "displayName": "hites-dev-cxas-smart-agent",
+  "rootAgent": "Maria Root Agent",
+  "audioProcessingConfig": {
+    "synthesizeSpeechConfigs": {
+      "es-US": {
+        "voice": "es-US-Chirp3-HD-Sulafat",
+        "speakingRate": 1.16
+      }
+    },
+    "bargeInConfig": {
+    },
+    "inactivityTimeout": "10s",
+    "ambientSoundConfig": {
+      "volumeGainDb": -45.7
+    }
+  },
+  "loggingSettings": {
+    "redactionConfig": {
+      "inspectTemplate": "$env_var",
+      "deidentifyTemplate": "$env_var"
+    },
+    "audioRecordingConfig": {
+      "gcsBucket": "$env_var"
+    },
+    "bigqueryExportSettings": {
+      "project": "$env_var",
+      "dataset": "$env_var"
+    },
+    "cloudLoggingSettings": {
+      "enableCloudLogging": true
+    },
+    "conversationLoggingSettings": {
+      "retentionWindow": "31536000s"
+    },
+    "evaluationAudioRecordingConfig": {
+      "gcsBucket": "$env_var",
+      "gcsPathPrefix": "/evaluations/$date/$session"
+    },
+    "metricAnalysisSettings": {
+    }
+  },
+  "guardrails": ["Safety Guardrail 1775683334288", "Prompt Guardrail 1775683337899"],
+  "modelSettings": {
+    "model": "gemini-3.1-flash-live"
+  },
+  "variableDeclarations": [{
+    "name": "ANI",
+    "schema": {
+      "type": "STRING"
+    }
+  }, {
+    "name": "TELEPHONY_PAYLOAD",
+    "description": "variable para traspaso de llamada a un agente humano",
+    "schema": {
+      "type": "OBJECT"
+    }
+  }, {
+    "name": "callid",
+    "schema": {
+      "type": "NUMBER"
+    }
+  }, {
+    "name": "session_id",
+    "schema": {
+      "type": "STRING",
+      "default": ""
+    }
+  }],
+  "dataStoreSettings": {
+  },
+  "languageSettings": {
+    "defaultLanguageCode": "es-US",
+    "fallbackAction": "exit"
+  },
+  "defaultChannelProfile": {
+    "personaProperty": {
+      "persona": "CONCISE"
+    },
+    "disableBargeInControl": true
+  },
+  "evaluationMetricsThresholds": {
+    "goldenEvaluationMetricsThresholds": {
+      "toolMatchingSettings": {
+        "extraToolCallBehavior": "FAIL"
+      }
+    }
+  },
+  "timeZoneSettings": {
+    "timeZone": "America/Los_Angeles"
+  },
+  "toolExecutionMode": "SEQUENTIAL",
+  "evaluationSettings": {
+    "scenarioConversationInitiator": "USER",
+    "goldenEvaluationToolCallBehaviour": "REAL",
+    "scenarioEvaluationToolCallBehaviour": "REAL",
+    "goldenRunMethod": "NAIVE",
+    "metricsConfig": {
+    }
+  },
+  "errorHandlingSettings": {
+    "errorHandlingStrategy": "FALLBACK_RESPONSE",
+    "fallbackResponseConfig": {
+      "maxFallbackAttempts": 1
+    },
+    "endSessionConfig": {
+      "escalateSession": true
+    }
+  }
+}

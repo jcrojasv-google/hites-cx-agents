@@ -1,0 +1,17 @@
+{
+  "name": "d7ef665a-5f96-418c-a234-77baa46ac158",
+  "dataStoreTool": {
+    "name": "pdf_tipificaciones",
+    "engineSource": {
+      "dataStoreSources": [{
+        "dataStore": {
+          "name": "$env_var",
+          "engineType": "CHAT_ENGINE"
+        }
+      }]
+    },
+    "filterParameterBehavior": "NEVER_INCLUDE"
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "pdf_tipificaciones"
+}

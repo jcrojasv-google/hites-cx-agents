@@ -1,0 +1,9 @@
+{
+  "name": "6a791327-986a-45d1-8008-1493bbd4847e",
+  "pythonFunction": {
+    "name": "colgar_llamada",
+    "pythonCode": "tools/colgar_llamada/python_function/python_code.py"
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "colgar_llamada"
+}

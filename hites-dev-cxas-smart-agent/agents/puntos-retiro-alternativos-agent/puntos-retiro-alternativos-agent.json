@@ -1,0 +1,6 @@
+{
+  "name": "4c424ad1-b09a-493e-9249-94eb5f7935da",
+  "displayName": "puntos-retiro-alternativos-agent",
+  "instruction": "agents/puntos-retiro-alternativos-agent/instruction.txt",
+  "tools": ["end_session", "pdf_retiro_alternativos"]
+}

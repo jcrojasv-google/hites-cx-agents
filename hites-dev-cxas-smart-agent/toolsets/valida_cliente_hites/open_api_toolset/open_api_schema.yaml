@@ -1,0 +1,51 @@
+openapi: 3.0.3
+info:
+  title: Validador de Cliente Hites
+  description: Servicio para verificar si un RUT pertenece a un cliente y obtener su nombre.
+  version: 1.0.0
+servers:
+  - url: $env_var
+    description: Servidor de Validación de Clientes
+paths:
+  /:
+    post:
+      summary: Validar Cliente por RUT
+      operationId: validarCliente
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                rut:
+                  type: string
+                  description: RUT del cliente a consultar.
+                  example: "156297518"
+      responses:
+        '200':
+          description: Datos del cliente encontrados
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WebhookResponse'
+components:
+  schemas:
+    WebhookResponse:
+      type: object
+      properties:
+        session_info:
+          type: object
+          properties:
+            parameters:
+              type: object
+              properties:
+                codigoCliente:
+                  type: string
+                  description: ID interno del cliente.
+                nombreCliente:
+                  type: string
+                  description: Nombre completo del cliente.
+                esClienteHites:
+                  type: boolean
+                  description: Indica si el RUT es cliente activo.

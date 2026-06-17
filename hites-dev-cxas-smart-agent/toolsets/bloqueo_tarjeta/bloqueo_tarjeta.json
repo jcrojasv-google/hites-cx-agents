@@ -1,0 +1,11 @@
+{
+  "name": "0eacb091-f276-4667-b664-7da48684e308",
+  "displayName": "bloqueo_tarjeta",
+  "openApiToolset": {
+    "openApiSchema": "toolsets/bloqueo_tarjeta/open_api_toolset/open_api_schema.yaml",
+    "apiAuthentication": {
+      "serviceAgentIdTokenAuthConfig": {
+      }
+    }
+  }
+}

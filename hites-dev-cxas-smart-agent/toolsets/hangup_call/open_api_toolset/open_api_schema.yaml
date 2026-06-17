@@ -1,0 +1,14 @@
+openapi: 3.0.0
+info:
+  title: Hangup Call
+  version: 1.0.0
+servers:
+  - url: $env_var
+paths:
+  /:
+    post:
+      summary: Sends hangup signal to disconnect the telephony call via UJET
+      operationId: hangupCall
+      responses:
+        '200':
+          description: Hangup signal sent successfully

@@ -1,0 +1,17 @@
+{
+  "name": "f5371913-e62c-4cb6-a64c-4eb8fdeafe42",
+  "dataStoreTool": {
+    "name": "pdf_comercios_asociados_coas",
+    "engineSource": {
+      "dataStoreSources": [{
+        "dataStore": {
+          "name": "$env_var",
+          "engineType": "CHAT_ENGINE"
+        }
+      }]
+    },
+    "filterParameterBehavior": "NEVER_INCLUDE"
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "pdf_comercios_asociados_coas"
+}

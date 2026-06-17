@@ -1,0 +1,11 @@
+{
+  "name": "3a4becc6-acdb-4fdd-8dce-f4c6dd8bd7ed",
+  "displayName": "tracking_orden",
+  "openApiToolset": {
+    "openApiSchema": "toolsets/tracking_orden/open_api_toolset/open_api_schema.yaml",
+    "apiAuthentication": {
+      "serviceAgentIdTokenAuthConfig": {
+      }
+    }
+  }
+}

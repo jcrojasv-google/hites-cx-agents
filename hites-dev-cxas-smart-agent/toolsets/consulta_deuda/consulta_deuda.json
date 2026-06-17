@@ -1,0 +1,11 @@
+{
+  "name": "a86d5e9d-491f-4c3d-93c5-d80e8b9c1fd7",
+  "displayName": "consulta_deuda",
+  "openApiToolset": {
+    "openApiSchema": "toolsets/consulta_deuda/open_api_toolset/open_api_schema.yaml",
+    "apiAuthentication": {
+      "serviceAgentIdTokenAuthConfig": {
+      }
+    }
+  }
+}

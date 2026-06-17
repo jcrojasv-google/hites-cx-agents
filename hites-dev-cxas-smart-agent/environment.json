@@ -1,0 +1,124 @@
+{
+  "app": {
+    "loggingSettings": {
+      "redactionConfig": {
+        "inspectTemplate": "projects/hi-gcp-des-contact-center/locations/us/inspectTemplates/hites-template-inspect",
+        "deidentifyTemplate": "projects/hi-gcp-des-contact-center/locations/us/deidentifyTemplates/hites-template-inspect"
+      },
+      "audioRecordingConfig": {
+        "gcsBucket": "gs://hi-des-global-agent--conversation-history-bucket"
+      },
+      "bigqueryExportSettings": {
+        "project": "hi-gcp-des-contact-center",
+        "dataset": "hi_des_ca"
+      },
+      "evaluationAudioRecordingConfig": {
+        "gcsBucket": "gs://hi-des-global-agent-test-bucket"
+      }
+    }
+  },
+  "tools": {
+    "pdf_comercios_asociados_coas": {
+      "dataStoreTool": {
+        "engineSource": {
+          "dataStoreSources": [{
+            "dataStore": {
+              "name": "projects/751016191549/locations/global/collections/default_collection/dataStores/des-pdf-comercios-asociados-coas-datastore_1778865551597"
+            }
+          }]
+        }
+      }
+    },
+    "pdf_retiro_alternativos": {
+      "dataStoreTool": {
+        "engineSource": {
+          "dataStoreSources": [{
+            "dataStore": {
+              "name": "projects/751016191549/locations/global/collections/default_collection/dataStores/des-pdf-retiro-alternativos-datastore_1773279564842"
+            }
+          }]
+        }
+      }
+    },
+    "pdf_sucursales": {
+      "dataStoreTool": {
+        "engineSource": {
+          "dataStoreSources": [{
+            "dataStore": {
+              "name": "projects/751016191549/locations/global/collections/default_collection/dataStores/des-pdf-sucursales-datastore_1770994839233"
+            }
+          }]
+        }
+      }
+    },
+    "pdf_tipificaciones": {
+      "dataStoreTool": {
+        "engineSource": {
+          "dataStoreSources": [{
+            "dataStore": {
+              "name": "projects/751016191549/locations/global/collections/default_collection/dataStores/des-pdf-tipificaciones-datastore_1778544521707"
+            }
+          }]
+        }
+      }
+    },
+    "txt_base_conocimientos": {
+      "dataStoreTool": {
+        "engineSource": {
+          "dataStoreSources": [{
+            "dataStore": {
+              "name": "projects/751016191549/locations/global/collections/default_collection/dataStores/des-txt-base-conocimiento-txt-datastore_1770899388953"
+            }
+          }]
+        }
+      }
+    }
+  },
+  "toolsets": {
+    "bloqueo_tarjeta": {
+      "openApiToolset": {
+        "url": "https://bloqueo-tarjeta--webhook-751016191549.us-central1.run.app"
+      }
+    },
+    "ccai-call-writer": {
+      "openApiToolset": {
+        "url": "https://ccai-call-writer-751016191549.us-central1.run.app"
+      }
+    },
+    "cloud_logger": {
+      "openApiToolset": {
+        "url": "https://cloud-logger-751016191549.us-central1.run.app"
+      }
+    },
+    "consulta_deuda": {
+      "openApiToolset": {
+        "url": "https://consultadeuda-webhook-751016191549.us-central1.run.app"
+      }
+    },
+    "consulta_saldo": {
+      "openApiToolset": {
+        "url": "https://consultasaldo-webhook-751016191549.us-central1.run.app"
+      }
+    },
+    "hangup_call": {
+      "openApiToolset": {
+        "url": "https://hangup-call-751016191549.us-central1.run.app"
+      }
+    },
+    "tracking_orden": {
+      "openApiToolset": {
+        "url": "https://tracking-webhook-751016191549.us-central1.run.app"
+      }
+    },
+    "valida_cliente_hites": {
+      "openApiToolset": {
+        "url": "https://validacliente-webhook-3-751016191549.us-central1.run.app"
+      }
+    },
+    "valida_rut": {
+      "openApiToolset": {
+        "url": "https://validarut-webhook-751016191549.us-central1.run.app"
+      }
+    }
+  }
+}

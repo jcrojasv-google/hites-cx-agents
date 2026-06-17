@@ -1,0 +1,65 @@
+openapi: 3.0.3
+info:
+  title: Consulta de Deuda Hites
+  description: Servicio para consultar el estado de cuenta, pago mínimo y vencimiento de un cliente.
+  version: 1.0.0
+servers:
+  - url: $env_var
+    description: Servidor de Consulta de Deuda
+paths:
+  /:
+    post:
+      summary: Consultar Deuda Detallada
+      operationId: consultarDeuda
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                rut:
+                  type: string
+                  description: RUT del cliente.
+                  example: "215030733"
+                pindeuda:
+                  type: string
+                  description: PIN de seguridad para la consulta de deuda.
+                  example: "1234"
+      responses:
+        '200':
+          description: Respuesta con el detalle de la deuda y fechas
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WebhookResponse'
+components:
+  schemas:
+    WebhookResponse:
+      type: object
+      properties:
+        session_info:
+          type: object
+          properties:
+            parameters:
+              type: object
+              properties:
+                validacionPinExitosa:
+                  type: boolean
+                  description: Indica si el PIN ingresado fue correcto.
+                codigoRespuestaDeuda:
+                  type: string
+                  description: Código de estado de la operación.
+                nombreCliente:
+                  type: string
+                  description: Nombre del titular.
+                facturado:
+                  type: string
+                  description: Monto total facturado a la fecha.
+                pagoMinimo:
+                  type: string
+                  description: Monto mínimo a pagar.
+                fechaVencimiento:
+                  type: string
+                  format: date
+                  description: Fecha de vencimiento del estado de cuenta.

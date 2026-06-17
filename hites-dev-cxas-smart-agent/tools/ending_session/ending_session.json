@@ -1,0 +1,9 @@
+{
+  "name": "e806aa03-7d0f-4b55-99bb-c085bad88a06",
+  "pythonFunction": {
+    "name": "ending_session",
+    "pythonCode": "tools/ending_session/python_function/python_code.py"
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "ending_session"
+}

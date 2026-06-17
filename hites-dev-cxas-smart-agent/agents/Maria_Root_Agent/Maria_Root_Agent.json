@@ -1,0 +1,36 @@
+{
+  "name": "c827c3e1-1697-466f-b9ef-bacce71dcd80",
+  "displayName": "Maria Root Agent",
+  "instruction": "agents/Maria_Root_Agent/instruction.txt",
+  "tools": ["end_session", "ending_session", "pdf_tipificaciones", "transfer_agent"],
+  "childAgents": ["base-conocimientos-agent", "bloqueo-tarjeta-agent", "comercios-asociados-agent", "consulta-deuda-agent", "consulta-saldo-agent", "puntos-retiro-alternativos-agent", "sucursales-agent", "tracking-agent"],
+  "beforeAgentCallbacks": [{
+    "pythonCode": "agents/Maria_Root_Agent/before_agent_callbacks/before_agent_callbacks_01/python_code.py",
+    "description": "store session_id"
+  }],
+  "afterAgentCallbacks": [{
+    "pythonCode": "agents/Maria_Root_Agent/after_agent_callbacks/after_agent_callbacks_01/python_code.py",
+    "disabled": true
+  }],
+  "beforeModelCallbacks": [{
+    "pythonCode": "agents/Maria_Root_Agent/before_model_callbacks/before_model_callbacks_01/python_code.py",
+    "description": "Transferir o Cortar llamada"
+  }],
+  "afterModelCallbacks": [{
+    "pythonCode": "agents/Maria_Root_Agent/after_model_callbacks/after_model_callbacks_01/python_code.py",
+    "description": "Finaliza post transferencia"
+  }],
+  "toolsets": [{
+    "toolset": "ccai-call-writer",
+    "toolIds": ["saveCallContext"]
+  }, {
+    "toolset": "cloud_logger",
+    "toolIds": ["logGet", "logMessage"]
+  }, {
+    "toolset": "valida_cliente_hites",
+    "toolIds": ["validarCliente"]
+  }, {
+    "toolset": "valida_rut",
+    "toolIds": ["validarRut"]
+  }]
+}

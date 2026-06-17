@@ -1,0 +1,9 @@
+{
+  "name": "866eabec-1f03-4365-aa47-cb7efaf774a1",
+  "pythonFunction": {
+    "name": "escalate_to_agent",
+    "pythonCode": "tools/escalate_to_agent/python_function/python_code.py"
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "escalate_to_agent"
+}

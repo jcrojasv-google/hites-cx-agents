@@ -1,0 +1,58 @@
+openapi: 3.0.0
+info:
+  title: Cloud Logger API
+  description: API para registrar peticiones en GCP Cloud Logging.
+  version: 1.0.0
+servers:
+  - url: $env_var
+paths:
+  /:
+    post:
+      summary: Loguear un mensaje o datos
+      description: Recibe cualquier cuerpo JSON y lo registra en Cloud Logging.
+      operationId: logMessage
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        '200':
+          description: Logueado exitosamente
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: Petición recibida y logueada correctamente
+                  received_at:
+                    type: string
+                    format: date-time
+    get:
+      summary: Health check / Log simple
+      description: Registra una petición GET simple.
+      operationId: logGet
+      responses:
+        '200':
+          description: Logueado exitosamente
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: Petición recibida y logueada correctamente
+                  received_at:
+                    type: string
+                    format: date-time

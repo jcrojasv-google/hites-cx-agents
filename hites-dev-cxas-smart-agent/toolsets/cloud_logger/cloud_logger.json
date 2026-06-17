@@ -1,0 +1,11 @@
+{
+  "name": "6c851dde-9287-4e8d-9607-634de6a2ec2e",
+  "displayName": "cloud_logger",
+  "openApiToolset": {
+    "openApiSchema": "toolsets/cloud_logger/open_api_toolset/open_api_schema.yaml",
+    "apiAuthentication": {
+      "serviceAgentIdTokenAuthConfig": {
+      }
+    }
+  }
+}

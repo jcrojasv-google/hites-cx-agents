@@ -1,0 +1,11 @@
+{
+  "name": "ab7de968-d12a-4dc7-b1ea-d9459004fdc9",
+  "displayName": "valida_rut",
+  "openApiToolset": {
+    "openApiSchema": "toolsets/valida_rut/open_api_toolset/open_api_schema.yaml",
+    "apiAuthentication": {
+      "serviceAgentIdTokenAuthConfig": {
+      }
+    }
+  }
+}

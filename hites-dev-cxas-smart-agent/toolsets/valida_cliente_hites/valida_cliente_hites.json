@@ -1,0 +1,11 @@
+{
+  "name": "9b9fd791-4b52-43c0-9012-5cb08c0a6d52",
+  "displayName": "valida_cliente_hites",
+  "openApiToolset": {
+    "openApiSchema": "toolsets/valida_cliente_hites/open_api_toolset/open_api_schema.yaml",
+    "apiAuthentication": {
+      "serviceAgentIdTokenAuthConfig": {
+      }
+    }
+  }
+}

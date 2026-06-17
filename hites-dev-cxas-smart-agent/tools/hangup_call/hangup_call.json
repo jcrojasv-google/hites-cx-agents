@@ -1,0 +1,10 @@
+{
+  "name": "7fbc5010-7261-48e0-8e72-7abaa82692f9",
+  "pythonFunction": {
+    "name": "hangup_call",
+    "pythonCode": "tools/hangup_call/python_function/python_code.py",
+    "description": "Returns UJET hangup payload to be sent BEFORE end_session.\nMust be called as the very first action after farewell message."
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "hangup_call"
+}

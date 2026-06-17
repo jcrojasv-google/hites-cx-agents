@@ -1,0 +1,43 @@
+{
+  "name": "943618ff-4b13-4961-b7fd-fb874b04c524",
+  "displayName": "Como Obtener una tarjeta",
+  "scenario": {
+    "task": "Esperar a que te salude y te solicite tu RUT.\nLuego Indica tu RUT Luego.\npregunta \"Como puedo obtener una tarjeta?\"",
+    "scenarioExpectations": [{
+      "agentResponse": {
+        "chunks": [{
+          "text": "En que te puedo ayudar?"
+        }]
+      }
+    }, {
+      "toolExpectation": {
+        "expectedToolCall": {
+          "tool": "txt_base_conocimientos",
+          "args": {
+            "query": {
+              "$matchType": "semantic",
+              "$matchValue": "",
+              "$originalValue": "Como puedo obtener una tarjeta?"
+            },
+            "rewrittenQueries": []
+          },
+          "displayName": "txt_base_conocimientos"
+        }
+      }
+    }],
+    "userFacts": [{
+      "name": "rut",
+      "value": "144127633"
+    }, {
+      "name": "current_date",
+      "value": "2026-06-01"
+    }],
+    "maxTurns": 10,
+    "variableOverrides": {
+      "callid": 1.23456789E8,
+      "current_date": "2026-06-01[America/Los_Angeles]"
+    },
+    "taskCompletionBehavior": "TASK_SATISFIED",
+    "userGoalBehavior": "USER_GOAL_SATISFIED"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "694e8eeb-bff1-451f-b3ab-077d9404d974",
+  "displayName": "consulta_saldo",
+  "openApiToolset": {
+    "openApiSchema": "toolsets/consulta_saldo/open_api_toolset/open_api_schema.yaml",
+    "apiAuthentication": {
+      "serviceAgentIdTokenAuthConfig": {
+      }
+    }
+  }
+}

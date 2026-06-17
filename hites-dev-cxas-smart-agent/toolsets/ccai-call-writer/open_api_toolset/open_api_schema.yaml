@@ -1,0 +1,85 @@
+openapi: 3.0.0
+info:
+  title: CCAI Call Writer API
+  description: API para guardar el contexto de llamadas en Google Cloud Storage.
+  version: 1.0.0
+servers:
+  - url: $env_var
+    description: Entorno de Desarrollo (GCP)
+paths:
+  /:
+    post:
+      summary: Guarda los datos de una llamada
+      description: Recibe información de contexto de una llamada y la almacena en un bucket de GCS como un archivo JSON.
+      operationId: saveCallContext
+      requestBody:
+        description: Datos de la llamada a almacenar.
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - idLlamada
+              properties:
+                idLlamada:
+                  type: string
+                  description: Identificador único de la llamada.
+                  example: "123456789"
+                rutCliente:
+                  type: string
+                  description: RUT del cliente asociado a la llamada.
+                  example: "12345678-9"
+                ani:
+                  type: string
+                  description: Número de teléfono de origen (Automatic Number Identification).
+                  example: "+56912345678"
+                nroCampana:
+                  type: string
+                  description: Número o identificador de la campaña.
+                  example: "CAMP_001"
+                session_id:
+                  type: string
+                  description: Identificador de la sesión.
+                  example: "abc-12345-xyz"
+      responses:
+        '200':
+          description: Datos guardados exitosamente.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "success"
+                  message:
+                    type: string
+                    example: "Archivo 123456789.json creado."
+        '400':
+          description: Solicitud incorrecta (Falta idLlamada).
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "El campo IdLlamada es obligatorio."
+        '405':
+          description: Método no permitido (Solo se permite POST).
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "Método no permitido"
+        '500':
+          description: Error interno del servidor (Problemas con GCS).
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal Error"
+                  message:
+                    type: string
+                    example: "Descripción del error interno"

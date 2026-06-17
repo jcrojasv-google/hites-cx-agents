@@ -1,0 +1,35 @@
+{
+  "name": "e6c7d50d-bb9d-40c3-8370-65da1b2d85b9",
+  "displayName": "transfer",
+  "scenario": {
+    "task": "Indicate that you want to talk to a human agent.\nIF asked for a RUT indicate that you are not a client.\n",
+    "scenarioExpectations": [{
+      "agentResponse": {
+        "chunks": [{
+          "text": "Lo lamento, lo transfiero enseguida"
+        }]
+      }
+    }, {
+      "toolExpectation": {
+        "expectedToolCall": {
+          "tool": "transfer_agent",
+          "args": {
+            "queue": "Prueba"
+          },
+          "displayName": "transfer_agent"
+        }
+      }
+    }],
+    "userFacts": [{
+      "name": "name",
+      "value": "Marcelo"
+    }],
+    "maxTurns": 1,
+    "variableOverrides": {
+      "ANI": "+56984300969",
+      "callid": 1044.0
+    },
+    "taskCompletionBehavior": "TASK_SATISFIED",
+    "userGoalBehavior": "USER_GOAL_SATISFIED"
+  }
+}

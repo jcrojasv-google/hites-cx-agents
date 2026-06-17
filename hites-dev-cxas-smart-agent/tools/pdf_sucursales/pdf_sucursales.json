@@ -1,0 +1,18 @@
+{
+  "name": "b7172985-00ef-428d-937d-efdb36ccba62",
+  "dataStoreTool": {
+    "name": "pdf_sucursales",
+    "description": "Información de sucursales de hites",
+    "engineSource": {
+      "dataStoreSources": [{
+        "dataStore": {
+          "name": "$env_var",
+          "engineType": "CHAT_ENGINE"
+        }
+      }]
+    },
+    "filterParameterBehavior": "NEVER_INCLUDE"
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "pdf_sucursales"
+}

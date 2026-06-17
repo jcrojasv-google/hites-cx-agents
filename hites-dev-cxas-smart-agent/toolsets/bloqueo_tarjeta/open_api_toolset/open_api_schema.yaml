@@ -1,0 +1,55 @@
+openapi: 3.0.0
+info:
+  title: Hites Card Blocking Tool
+  description: Tool to block a customer's card in Hites systems.
+  version: 1.0.0
+servers:
+  - url: $env_var
+    description: GCP Cloud Function URL
+paths:
+  /:
+    post:
+      summary: Block customer card
+      operationId: blockCard
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                rutCliente:
+                  type: string
+                  description: The customer's RUT (without dots or dash).
+                motivoBloqueo:
+                  type: string
+                  description: The reason for blocking the card.
+                fechaEvento:
+                  type: string
+                  description: The date of the event (e.g. loss or theft) if provided by the user.
+              required:
+                - rutCliente
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  sessionInfo:
+                    type: object
+                    properties:
+                      parameters:
+                        type: object
+                        properties:
+                          bloqueo_fecha:
+                            type: string
+                          bloqueo_hora:
+                            type: string
+                          bloqueo_gestion:
+                            type: integer
+        '400':
+          description: Invalid input
+        '500':
+          description: API Error
