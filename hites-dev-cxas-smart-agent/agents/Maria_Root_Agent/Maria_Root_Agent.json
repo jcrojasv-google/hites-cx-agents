@@ -3,7 +3,7 @@
   "displayName": "Maria Root Agent",
   "instruction": "agents/Maria_Root_Agent/instruction.txt",
   "tools": ["end_session", "ending_session", "pdf_tipificaciones", "transfer_agent"],
-  "childAgents": ["bloqueo-tarjeta-agent", "consulta-deuda-agent", "consulta-saldo-agent", "informacion-hites-agent", "puntos-retiro-alternativos-agent", "tracking-agent"],
+  "childAgents": ["bloqueo-tarjeta-agent", "consulta-deuda-agent", "consulta-saldo-agent", "informacion-hites-agent", "tracking-agent"],
   "beforeAgentCallbacks": [{
     "pythonCode": "agents/Maria_Root_Agent/before_agent_callbacks/before_agent_callbacks_01/python_code.py",
     "description": "store session_id"

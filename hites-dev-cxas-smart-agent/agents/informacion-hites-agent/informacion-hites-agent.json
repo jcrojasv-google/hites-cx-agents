@@ -2,5 +2,5 @@
   "name": "a9b7733e-28dc-452f-825b-66f060b688b8",
   "displayName": "informacion-hites-agent",
   "instruction": "agents/informacion-hites-agent/instruction.txt",
-  "tools": ["end_session", "pdf_comercios_asociados_coas", "pdf_sucursales", "txt_base_conocimientos"]
+  "tools": ["end_session", "pdf_comercios_asociados_coas", "pdf_retiro_alternativos", "pdf_sucursales", "txt_base_conocimientos"]
 }

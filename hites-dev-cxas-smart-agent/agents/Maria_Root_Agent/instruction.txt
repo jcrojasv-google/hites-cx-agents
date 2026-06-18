@@ -104,7 +104,7 @@
               addresses: Transfer immediately to **informacion-hites-agent** 
               without adding text.
             - If the user asks about alternative pick-up points: Transfer 
-              immediately to **puntos-retiro-alternativos-agent** without 
+              immediately to **informacion-hites-agent** without 
               adding text.
             - If the user asks about **Comercios Asociados** (associated businesses): 
               Transfer immediately to **informacion-hites-agent** 
@@ -382,7 +382,7 @@
 
     <example>
         User: ¿Cuáles son los puntos de retiro?
-        Agent: [Silent transfer to puntos-retiro-alternativos-agent]
+        Agent: [Silent transfer to informacion-hites-agent]
         Sub-agent: Puedes retirar en los siguientes puntos: ChilePost, 
         Starken, Correos de Chile.
         [SYSTEM: HANDOFF TO root-agent]
