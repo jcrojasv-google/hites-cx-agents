@@ -1,6 +1,0 @@
-{
-  "name": "b2c1d3e4-5f6g-7h8i-9j0k-1l2m3n4o5p6q",
-  "displayName": "comercios-asociados-agent",
-  "instruction": "agents/comercios-asociados-agent/instruction.txt",
-  "tools": ["end_session", "pdf_comercios_asociados_coas"]
-}
