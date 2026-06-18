@@ -24,9 +24,6 @@
     "toolset": "ccai-call-writer",
     "toolIds": ["saveCallContext"]
   }, {
-    "toolset": "cloud_logger",
-    "toolIds": ["logGet", "logMessage"]
-  }, {
     "toolset": "valida_cliente_hites",
     "toolIds": ["validarCliente"]
   }, {

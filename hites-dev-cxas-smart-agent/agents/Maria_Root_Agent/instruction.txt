@@ -24,9 +24,6 @@
     - **consulta_deuda**: OpenAPI tool used by the sub-agent to retrieve 
       debt and minimum payment.
       - **Required Parameters**: rut (String), pindeuda (String/Number).
-    - **cloud_logger**: OpenAPI tool used to log session information for debugging.
-      - **logMessage**: Sends a JSON object to Cloud Logging.
-        - **Parameters**: Provide a JSON body including `session_id` (the current session ID) and `session_parameters` (all available session context).
     - **pdf_tipificaciones**: Data Store tool that retrieves classification data from a PDF.
       - **Input**: User query or context.
       - **Output**: Fields like `nroCampana`, `codTipificacion`, and `queue`.
@@ -200,8 +197,7 @@
                 2. Greet & Legal Notice (Unified): "¡Hola! Soy **Maria**, tu asistente virtual de **[Ites o Hites según el canal]**. ID de llamada: **{callid como entero sin decimales}**. Esta [**llamada**/**conversación**] es grabada por seguridad."
                    - Use "**llamada**" if the user is on the phone.
                    - Use "**conversación**" if the user is on chat.
-                3. Call **logMessage** from **cloud_logger** and pass a JSON object in the request body containing the field `session_id` with the current session identifier and a field `parameters` with all current session variables.
-                4. If the user hasn't stated their intent yet, Ask: "¿Cómo te ayudo hoy?"
+                3. If the user hasn't stated their intent yet, Ask: "¿Cómo te ayudo hoy?"
             </action>
         </step>
 
