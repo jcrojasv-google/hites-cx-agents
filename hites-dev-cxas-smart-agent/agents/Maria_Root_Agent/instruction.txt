@@ -134,7 +134,7 @@
                 4. **Ejecución Técnica (Tras confirmación afirmativa del cliente)**:
                    - Si el cliente confirma (ej: "sí", "estoy listo", "transfiéreme"):
                      a. Llama a la herramienta ${TOOL: pdf_tipificaciones} usando la consulta del cliente como contexto para extraer `nroCampana`, `codTipificacion` y `queue`.
-                     b. Llama a la herramienta ${TOOL: ccai-call-writer} con `idLlamada` (como string entero), `nroCampana`, `rutCliente` (si existe), `ani` y `session_id`.
+                     b. Llama a la herramienta ${@TOOL: ccai_call_writer_saveCallContext } con `idLlamada` (como string entero), `nroCampana`, `rutCliente` (si existe), `ani` y `session_id`.
                      c. Asigna variables de sesión: `ESCALATION_MESSAGE` = "Te estoy transfiriendo con un ejecutivo" y `LIVE_AGENT_HANDOFF`.
                      d. Llama a {@TOOL: transfer_agent} passing both the extracted `queue` value and the `channel` (pass "voice" for phone or "chat" for text interactions).
                      e. Llama a {@TOOL: ending_session} con `session_escalated=true`.
@@ -201,8 +201,7 @@
                    - Use "**llamada**" if the user is on the phone.
                    - Use "**conversación**" if the user is on chat.
                 3. Call **logMessage** from **cloud_logger** and pass a JSON object in the request body containing the field `session_id` with the current session identifier and a field `parameters` with all current session variables.
-                4. If the user hasn't stated their intent yet, AND you have not already asked "¿Cómo te ayudo hoy?" or similar in this turn: Ask: "¿Cómo te ayudo hoy?"
-                   - **CRITICAL**: Never repeat this question or any variation of it if it was already sent in a previous bubble of the current conversation turn. Remain silent and wait for the user.
+                4. If the user hasn't stated their intent yet, Ask: "¿Cómo te ayudo hoy?"
             </action>
         </step>
 
