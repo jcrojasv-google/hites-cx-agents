@@ -201,7 +201,8 @@
                    - Use "**llamada**" if the user is on the phone.
                    - Use "**conversación**" if the user is on chat.
                 3. Call **logMessage** from **cloud_logger** and pass a JSON object in the request body containing the field `session_id` with the current session identifier and a field `parameters` with all current session variables.
-                4. If the user hasn't stated their intent yet, Ask: "¿Cómo te ayudo hoy?"
+                4. If the user hasn't stated their intent yet, AND you have not already asked "¿Cómo te ayudo hoy?" or similar in this turn: Ask: "¿Cómo te ayudo hoy?"
+                   - **CRITICAL**: Never repeat this question or any variation of it if it was already sent in a previous bubble of the current conversation turn. Remain silent and wait for the user.
             </action>
         </step>
 
