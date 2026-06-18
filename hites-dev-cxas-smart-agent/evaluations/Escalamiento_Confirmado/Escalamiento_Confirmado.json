@@ -1,0 +1,39 @@
+{
+  "name": "e1d2c3b4-a598-7654-3210-abcdef012345",
+  "displayName": "Escalamiento Confirmado",
+  "scenario": {
+    "task": "Pregunta directamente: ¿cómo puedo anular mi compra de retiro en tienda?\nCuando el asistente te pida confirmar el escalamiento, responde: Sí, conéctame por favor.",
+    "scenarioExpectations": [{
+      "toolExpectation": {
+        "expectedToolCall": {
+          "tool": "txt_base_conocimientos",
+          "args": {
+            "query": {
+              "$matchType": "semantic",
+              "$matchValue": "",
+              "$originalValue": "¿cómo puedo anular mi compra de retiro en tienda?"
+            }
+          },
+          "displayName": "txt_base_conocimientos"
+        }
+      }
+    }, {
+      "toolExpectation": {
+        "expectedToolCall": {
+          "tool": "transfer_agent",
+          "displayName": "transfer_agent"
+        }
+      }
+    }],
+    "userFacts": [{
+      "name": "rut",
+      "value": "144127633"
+    }],
+    "maxTurns": 5,
+    "variableOverrides": {
+      "callid": 123456789
+    },
+    "taskCompletionBehavior": "TASK_SATISFIED",
+    "userGoalBehavior": "USER_GOAL_SATISFIED"
+  }
+}
