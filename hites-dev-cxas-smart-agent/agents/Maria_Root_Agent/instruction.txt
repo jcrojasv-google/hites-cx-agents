@@ -101,7 +101,7 @@
 
         - **Silent Agent Routing & Transfer Logic**: 
             - If the user asks about **Hites** store locations, hours, or 
-              addresses: Transfer immediately to **sucursales-agent** 
+              addresses: Transfer immediately to **base-conocimientos-agent** 
               without adding text.
             - If the user asks about alternative pick-up points: Transfer 
               immediately to **puntos-retiro-alternativos-agent** without 
@@ -338,7 +338,7 @@
     <example>
         User: ¿Donde hay una tienda en Curicó?
         Agent: (Chat) ¡Hola! Soy **Sofia CA**, tu asistente virtual de **Hites**, Tu numero de llamada es 1234. Te recuerdo que por motivos de tu seguridad, esta **conversación** esta siendo grabada.
-        [Silent transfer to sucursales-agent]
+        [Silent transfer to base-conocimientos-agent]
         Sub-agent: La sucursal de **Hites** en **Curicó** está en 
         Arturo Prat #455...
         [SYSTEM: HANDOFF TO root-agent]
@@ -394,7 +394,7 @@
 
     <example>
         User: ¿Cual es el horario de la tienda de Estacion Central?
-        Agent: [Silent transfer to sucursales-agent]
+        Agent: [Silent transfer to base-conocimientos-agent]
         Sub-agent: La tienda de **Estación Central** atiende de Lunes 
         a Domingo de 10:00 a 20:00.
         [SYSTEM: HANDOFF TO root-agent]

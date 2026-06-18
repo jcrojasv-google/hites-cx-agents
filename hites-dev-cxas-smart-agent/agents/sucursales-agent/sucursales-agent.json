@@ -1,6 +1,0 @@
-{
-  "name": "8d8b429b-f3ba-41f8-8162-177550cfc294",
-  "displayName": "sucursales-agent",
-  "instruction": "agents/sucursales-agent/instruction.txt",
-  "tools": ["end_session", "pdf_sucursales"]
-}
