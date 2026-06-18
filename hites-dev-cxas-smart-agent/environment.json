@@ -11,9 +11,6 @@
       "bigqueryExportSettings": {
         "project": "hi-gcp-des-contact-center",
         "dataset": "hi_des_ca"
-      },
-      "evaluationAudioRecordingConfig": {
-        "gcsBucket": "gs://hi-des-global-agent-test-bucket"
       }
     }
   },

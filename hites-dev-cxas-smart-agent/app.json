@@ -18,6 +18,7 @@
   },
   "loggingSettings": {
     "redactionConfig": {
+      "enableRedaction": true,
       "inspectTemplate": "$env_var",
       "deidentifyTemplate": "$env_var"
     },
@@ -33,10 +34,6 @@
     },
     "conversationLoggingSettings": {
       "retentionWindow": "31536000s"
-    },
-    "evaluationAudioRecordingConfig": {
-      "gcsBucket": "$env_var",
-      "gcsPathPrefix": "/evaluations/$date/$session"
     },
     "metricAnalysisSettings": {
     }
