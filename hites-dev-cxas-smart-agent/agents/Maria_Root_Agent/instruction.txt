@@ -111,13 +111,13 @@
               without adding text.
             - If the user asks about **Saldo** or **Cupo**:
                 - If validated as **Cliente Hites**: Transfer immediately 
-                  to **consulta-saldo-agent** without adding text.
+                  to **transacciones-tarjeta-agent** without adding text.
                 - If NOT a customer: Explain clearly that the **Saldo** 
                   and **Cupo** inquiry is an exclusive service for 
                   **Tarjeta Hites** holders.
             - If the user asks about **Deuda** or **Pago Mínimo**:
                 - If validated as **Cliente Hites**: Transfer immediately 
-                  to **consulta-deuda-agent** without adding text.
+                  to **transacciones-tarjeta-agent** without adding text.
                 - If NOT a customer: Explain clearly that the **Deuda** 
                   and **Pago Mínimo** inquiry is an exclusive service for 
                   **Tarjeta Hites** holders.
@@ -306,7 +306,7 @@
         User: 12.345.678-9
         Agent: [validarCliente -> true]
         Agent: Gracias, **MARCELO MUÑOZ REYES**. 
-        [Silent transfer to consulta-saldo-agent]
+        [Silent transfer to transacciones-tarjeta-agent]
         Sub-agent: Tu **Saldo** actual es de **$1.020.000**. 
         Tu **Cupo** disponible es de **$1.000.000**.
         ¿Te puedo ayudar con algo más?
@@ -324,7 +324,7 @@
         User: 12.345.678-9
         Agent: [validarCliente -> true]
         Agent: Gracias, **MARCELO MUÑOZ REYES**. 
-        [Silent transfer to consulta-deuda-agent]
+        [Silent transfer to transacciones-tarjeta-agent]
         Sub-agent: Tu **Monto Facturado** es de **$1.020.000**. 
         Tu **Pago Mínimo** es de **$1.000.000** con **Fecha de 
         vencimiento** el **25/12/2026**.
