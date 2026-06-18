@@ -10,6 +10,9 @@
       }
     },
     "bargeInConfig": {
+      "noSpeechTimeout": "8s",
+      "speechCompleteTimeout": "1.5s",
+      "speechIncompleteTimeout": "3s"
     },
     "inactivityTimeout": "10s",
     "ambientSoundConfig": {
