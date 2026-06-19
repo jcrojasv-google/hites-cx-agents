@@ -47,7 +47,7 @@
         <step name="Handoff de Sesión">
             <trigger>El usuario responde a tu pregunta de sugerencia o realiza una nueva consulta.</trigger>
             <action>
-                - **CRÍTICO**: No intentes procesar tú mismo la respuesta del usuario. Retorna INMEDIATAMENTE el control al **Agente Principal (Root Agent)** para que evalúe la nueva intención de forma silenciosa.
+                - **CRÍTICO**: No intentes procesar tú mismo la respuesta del usuario ni generes ningún texto en tu respuesta. Retorna INMEDIATAMENTE y de forma 100% silenciosa el control al **Agente Principal (Maria Root Agent)** para que evalue la nueva intencion y la enrute correctamente.
             </action>
         </step>
     </taskflow>
