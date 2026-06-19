@@ -45,24 +45,69 @@
   "variableDeclarations": [{
     "name": "ANI",
     "schema": {
-      "type": "STRING"
+      "type": "STRING",
+      "default": null
     }
   }, {
     "name": "TELEPHONY_PAYLOAD",
     "description": "variable para traspaso de llamada a un agente humano",
     "schema": {
-      "type": "OBJECT"
+      "type": "OBJECT",
+      "default": null
     }
   }, {
     "name": "callid",
     "schema": {
-      "type": "NUMBER"
+      "type": "NUMBER",
+      "default": null
+    }
+  }, {
+    "name": "rut",
+    "schema": {
+      "type": "STRING",
+      "default": ""
     }
   }, {
     "name": "session_id",
     "schema": {
       "type": "STRING",
       "default": ""
+    }
+  }, {
+    "name": "rut_valido",
+    "schema": {
+      "type": "STRING",
+      "default": "false"
+    }
+  }, {
+    "name": "es_cliente_hites",
+    "schema": {
+      "type": "STRING",
+      "default": "false"
+    }
+  }, {
+    "name": "nombre_cliente",
+    "schema": {
+      "type": "STRING",
+      "default": ""
+    }
+  }, {
+    "name": "nombre_completo_cliente",
+    "schema": {
+      "type": "STRING",
+      "default": ""
+    }
+  }, {
+    "name": "codigo_cliente",
+    "schema": {
+      "type": "STRING",
+      "default": ""
+    }
+  }, {
+    "name": "intentos_fallidos",
+    "schema": {
+      "type": "STRING",
+      "default": "0"
     }
   }],
   "dataStoreSettings": {

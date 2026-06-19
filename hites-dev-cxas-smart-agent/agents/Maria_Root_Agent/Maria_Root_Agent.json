@@ -2,7 +2,7 @@
   "name": "c827c3e1-1697-466f-b9ef-bacce71dcd80",
   "displayName": "Maria Root Agent",
   "instruction": "agents/Maria_Root_Agent/instruction.txt",
-  "tools": ["end_session", "ending_session", "pdf_tipificaciones", "transfer_agent"],
+  "tools": ["end_session", "ending_session", "pdf_tipificaciones", "transfer_agent", "valida_cliente_wrapper"],
   "childAgents": ["bloqueo-tarjeta-agent", "informacion-hites-agent", "tracking-agent", "transacciones-tarjeta-agent"],
   "beforeAgentCallbacks": [{
     "pythonCode": "agents/Maria_Root_Agent/before_agent_callbacks/before_agent_callbacks_01/python_code.py",
