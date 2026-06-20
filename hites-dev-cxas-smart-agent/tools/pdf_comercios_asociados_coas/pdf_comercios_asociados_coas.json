@@ -4,12 +4,7 @@
     "name": "pdf_comercios_asociados_coas",
     "description": "Busca comercios asociados externos (farmacias, supermercados, tiendas) donde se puede comprar con la Tarjeta Hites y sus ubicaciones.",
     "engineSource": {
-      "dataStoreSources": [{
-        "dataStore": {
-          "name": "$env_var",
-          "engineType": "CHAT_ENGINE"
-        }
-      }]
+      "engine": "$env_var"
     },
     "filterParameterBehavior": "NEVER_INCLUDE"
   },

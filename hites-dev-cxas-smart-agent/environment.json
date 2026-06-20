@@ -18,55 +18,35 @@
     "pdf_comercios_asociados_coas": {
       "dataStoreTool": {
         "engineSource": {
-          "dataStoreSources": [{
-            "dataStore": {
-              "name": "projects/751016191549/locations/global/collections/default_collection/dataStores/des-pdf-comercios-asociados-coas-datastore_1778865551597"
-            }
-          }]
+          "engine": "projects/751016191549/locations/global/collections/default_collection/engines/des-pdf-comercios-asociados-coas-datastore_1778865551597"
         }
       }
     },
     "pdf_retiro_alternativos": {
       "dataStoreTool": {
         "engineSource": {
-          "dataStoreSources": [{
-            "dataStore": {
-              "name": "projects/751016191549/locations/global/collections/default_collection/dataStores/des-pdf-retiro-alternativos-datastore_1773279564842"
-            }
-          }]
+          "engine": "projects/751016191549/locations/global/collections/default_collection/engines/des-pdf-retiro-alternativos-datastore_1773279564842"
         }
       }
     },
     "pdf_sucursales": {
       "dataStoreTool": {
         "engineSource": {
-          "dataStoreSources": [{
-            "dataStore": {
-              "name": "projects/751016191549/locations/global/collections/default_collection/dataStores/des-pdf-sucursales-datastore_1770994839233"
-            }
-          }]
+          "engine": "projects/751016191549/locations/global/collections/default_collection/engines/des-pdf-sucursales-datastore_1770994839233"
         }
       }
     },
     "pdf_tipificaciones": {
       "dataStoreTool": {
         "engineSource": {
-          "dataStoreSources": [{
-            "dataStore": {
-              "name": "projects/751016191549/locations/global/collections/default_collection/dataStores/des-pdf-tipificaciones-datastore_1778544521707"
-            }
-          }]
+          "engine": "projects/751016191549/locations/global/collections/default_collection/engines/des-pdf-tipificaciones-datastore_1778544521707"
         }
       }
     },
     "txt_base_conocimientos": {
       "dataStoreTool": {
         "engineSource": {
-          "dataStoreSources": [{
-            "dataStore": {
-              "name": "projects/751016191549/locations/global/collections/default_collection/dataStores/des-txt-base-conocimiento-txt-datastore_1770899388953"
-            }
-          }]
+          "engine": "projects/751016191549/locations/global/collections/default_collection/engines/des-txt-base-conocimiento-txt-datastore_1770899388953"
         }
       }
     }

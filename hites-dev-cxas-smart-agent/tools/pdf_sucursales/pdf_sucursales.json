@@ -4,12 +4,7 @@
     "name": "pdf_sucursales",
     "description": "Información de sucursales de hites",
     "engineSource": {
-      "dataStoreSources": [{
-        "dataStore": {
-          "name": "$env_var",
-          "engineType": "CHAT_ENGINE"
-        }
-      }]
+      "engine": "$env_var"
     },
     "filterParameterBehavior": "NEVER_INCLUDE"
   },
