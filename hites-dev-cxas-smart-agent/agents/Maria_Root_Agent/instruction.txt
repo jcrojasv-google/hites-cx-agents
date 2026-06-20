@@ -224,7 +224,7 @@
 
     <subtask name="Asistencia Especializada y Recuperación de Handoff">
         <step name="Procesar Intención y Transferir">
-            <trigger>La intención del usuario coincide con un sub-agente (Tiendas, Saldo, Deuda, Reparaciones, Información).</trigger>
+            <trigger>La intención del usuario coincide con un sub-agente (Tiendas, Saldo, Deuda, Información).</trigger>
             <action>Realiza la transferencia silenciosa de inmediato al agente correspondiente.</action>
         </step>
 

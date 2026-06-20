@@ -7,10 +7,10 @@ def ending_session() -> dict:
     context.state["ending_session"] = True
     return {
       "result": "Success: La sesión ha sido marcada para finalizar de forma segura.",
-      "agent_action": "Despídete cordialmente del cliente de forma muy breve y profesional, y finaliza la interacción."
+      "agent_action": "Llama de inmediato a la herramienta transfer_to_agent(agent_name='Maria_Root_Agent') de forma 100% silenciosa para retornar el control al orquestador, sin generar ningún texto o voz en tu respuesta."
     }
   except Exception as e:
     return {
       "result": f"Error: No se pudo marcar la sesión para finalizar: {str(e)}",
-      "agent_action": "Informa al cliente de un inconveniente técnico leve, despídete y termina la llamada."
+      "agent_action": "Llama de inmediato a la herramienta transfer_to_agent(agent_name='Maria_Root_Agent') de forma 100% silenciosa para retornar el control al orquestador."
     }
