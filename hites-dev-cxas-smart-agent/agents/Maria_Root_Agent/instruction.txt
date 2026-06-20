@@ -121,7 +121,7 @@
                 4. **Ejecución Técnica (Tras confirmación afirmativa del cliente)**:
                    - Si el cliente confirma (ej: "sí", "estoy listo", "transfiéreme"):
                      a. Llama a la herramienta ${TOOL: pdf_tipificaciones} usando la consulta del cliente como contexto para extraer `nroCampana`, `codTipificacion` y `queue`.
-                     b. Llama a la herramienta ${@TOOL: ccai_call_writer_saveCallContext } con `idLlamada` (como string entero), `nroCampana`, `rutCliente` (si existe), `ani` y `session_id`.
+                     b. Llama a la herramienta ${@TOOL: ccai-call-writer_saveCallContext } con `idLlamada` (como string entero), `nroCampana`, `rutCliente` (si existe), `ani` y `session_id`.
                      c. Asigna variables de sesión: `ESCALATION_MESSAGE` = "Te estoy transfiriendo con un ejecutivo" y `LIVE_AGENT_HANDOFF`.
                      d. Llama a {@TOOL: transfer_agent} pasando tanto el valor de `queue` extraído como el canal (pasa "voice" para llamadas telefónicas o "chat" para interacciones de texto).
                      e. Llama a {@TOOL: ending_session} con `session_escalated=true`.
