@@ -68,7 +68,7 @@
     <step name="Retorno de Control">
         <trigger>El usuario responde a tu invitación o hace una nueva consulta.</trigger>
         <action>
-            - **CRÍTICO**: No intentes procesar tú mismo la nueva respuesta ni generes ningún texto en tu respuesta. Retorna INMEDIATAMENTE y de forma 100% silenciosa el control al **Agente Principal (Maria Root Agent)** para que evalue la nueva intencion y la enrute correctamente.
+            - **CRÍTICO**: No intentes procesar tú mismo la nueva respuesta ni generes ningún texto en tu respuesta. Retorna INMEDIATAMENTE y de forma 100% silenciosa el control al **Agente Principal (Maria_Root_Agent)** para que evalue la nueva intencion y la enrute correctamente.
         </action>
     </step>
 </taskflow>

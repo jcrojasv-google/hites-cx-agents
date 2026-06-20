@@ -1,7 +1,7 @@
 {
   "name": "fa3de984-bac0-48f0-976f-1e1713491337",
   "displayName": "hites-dev-cxas-smart-agent",
-  "rootAgent": "Maria Root Agent",
+  "rootAgent": "Maria_Root_Agent",
   "audioProcessingConfig": {
     "synthesizeSpeechConfigs": {
       "es-US": {

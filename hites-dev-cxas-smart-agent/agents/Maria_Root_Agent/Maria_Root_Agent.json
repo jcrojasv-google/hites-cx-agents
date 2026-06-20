@@ -1,6 +1,6 @@
 {
   "name": "c827c3e1-1697-466f-b9ef-bacce71dcd80",
-  "displayName": "Maria Root Agent",
+  "displayName": "Maria_Root_Agent",
   "instruction": "agents/Maria_Root_Agent/instruction.txt",
   "tools": ["end_session", "ending_session", "pdf_tipificaciones", "transfer_agent", "valida_cliente_wrapper", "txt_base_conocimientos"],
   "childAgents": ["bloqueo-tarjeta-agent", "informacion-hites-agent", "tracking-agent", "transacciones-tarjeta-agent"],
