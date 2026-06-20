@@ -4,7 +4,12 @@
     "name": "txt_base_conocimientos",
     "description": "Buscador general de base de conocimientos de Hites: políticas comerciales, despachos, retiro, devoluciones, garantías, obtención de tarjeta, boletas y canales de atención.",
     "engineSource": {
-      "engine": "$env_var"
+      "dataStoreSources": [{
+        "dataStore": {
+          "name": "$env_var",
+          "engineType": "CHAT_ENGINE"
+        }
+      }]
     },
     "filterParameterBehavior": "NEVER_INCLUDE"
   },

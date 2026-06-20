@@ -4,7 +4,12 @@
     "name": "pdf_tipificaciones",
     "description": "Recupera datos de clasificación (nroCampana, codTipificacion y queue) basados en la consulta del usuario antes de transferir a un ejecutivo.",
     "engineSource": {
-      "engine": "$env_var"
+      "dataStoreSources": [{
+        "dataStore": {
+          "name": "$env_var",
+          "engineType": "CHAT_ENGINE"
+        }
+      }]
     },
     "filterParameterBehavior": "NEVER_INCLUDE"
   },
