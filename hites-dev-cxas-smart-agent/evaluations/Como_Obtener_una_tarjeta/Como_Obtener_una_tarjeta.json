@@ -3,7 +3,6 @@
   "displayName": "Como Obtener una tarjeta",
   "scenario": {
     "task": "Esperar a que te salude y te solicite tu RUT.\nLuego Indica tu RUT Luego.\npregunta \"Como puedo obtener una tarjeta?\"",
-    "rubrics": [],
     "scenarioExpectations": [{
       "agentResponse": {
         "chunks": [{
@@ -24,7 +23,7 @@
           },
           "displayName": "txt_base_conocimientos"
         },
-        "mock_tool_response": {
+        "mockToolResponse": {
           "response": {
             "output": {
               "result": "Para obtener la tarjeta Hites, debes dirigirte a cualquier tienda Hites con tu cédula de identidad vigente y ser mayor de 21 años."

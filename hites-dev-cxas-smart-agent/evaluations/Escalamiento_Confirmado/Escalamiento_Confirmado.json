@@ -3,7 +3,6 @@
   "displayName": "Escalamiento Confirmado",
   "scenario": {
     "task": "Pregunta directamente: ¿cómo puedo anular mi compra de retiro en tienda?\nCuando el asistente te pida confirmar el escalamiento, responde: Sí, conéctame por favor.",
-    "rubrics": [],
     "scenarioExpectations": [{
       "toolExpectation": {
         "expectedToolCall": {
@@ -17,7 +16,7 @@
           },
           "displayName": "txt_base_conocimientos"
         },
-        "mock_tool_response": {
+        "mockToolResponse": {
           "response": {
             "output": {
               "result": "Para compras con retiro en tienda, las anulaciones en línea se pueden realizar dentro de los 10 días siguientes a la compra, o contactando a un ejecutivo si el plazo expiró."
@@ -31,9 +30,10 @@
           "tool": "transfer_agent",
           "displayName": "transfer_agent"
         },
-        "mock_tool_response": {
+        "mockToolResponse": {
           "response": {
-            "output": {}
+            "output": {
+            }
           }
         }
       }

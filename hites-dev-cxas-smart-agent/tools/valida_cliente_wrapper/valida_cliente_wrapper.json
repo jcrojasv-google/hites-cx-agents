@@ -3,7 +3,7 @@
   "pythonFunction": {
     "name": "valida_cliente_wrapper",
     "pythonCode": "tools/valida_cliente_wrapper/python_function/python_code.py",
-    "description": "Herramienta de tipo Python: valida_cliente_wrapper.\nOrquesta la validación de RUT y consulta de cliente de Hites de forma secuencial y limpia.\nMapea todos los resultados de vuelta en el estado de la sesión (\u0027context.state\u0027)."
+    "description": "Valida el RUT y verifica si es cliente de Hites de forma consolidada.\nRetorna un diccionario estructurado con el resultado y actualiza el estado."
   },
   "executionType": "SYNCHRONOUS",
   "displayName": "valida_cliente_wrapper"
