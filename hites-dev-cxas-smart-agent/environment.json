@@ -97,11 +97,6 @@
         "url": "https://consultasaldo-webhook-751016191549.us-central1.run.app"
       }
     },
-    "hangup_call": {
-      "openApiToolset": {
-        "url": "https://hangup-call-751016191549.us-central1.run.app"
-      }
-    },
     "tracking_orden": {
       "openApiToolset": {
         "url": "https://tracking-webhook-751016191549.us-central1.run.app"

@@ -1,9 +1,0 @@
-{
-  "name": "623fffde-901e-443b-b89e-b471f3077103",
-  "pythonFunction": {
-    "name": "hangup",
-    "pythonCode": "tools/hangup/python_function/python_code.py"
-  },
-  "executionType": "SYNCHRONOUS",
-  "displayName": "hangup"
-}
