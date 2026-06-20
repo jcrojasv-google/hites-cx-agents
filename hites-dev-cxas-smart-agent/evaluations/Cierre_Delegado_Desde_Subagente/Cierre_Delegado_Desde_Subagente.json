@@ -1,0 +1,66 @@
+{
+  "name": "c5e5d5c4-b5a6-7988-9d0e-1f2a3b4c5d6f",
+  "displayName": "Cierre Delegado Desde Subagente",
+  "scenario": {
+    "task": "Pregunta: ¿cuáles son los comercios asociados?\nCuando el asistente te responda, di exactamente: \u0027No, eso es todo gracias!!!\u0027",
+    "scenarioExpectations": [{
+      "toolExpectation": {
+        "expectedToolCall": {
+          "tool": "pdf_comercios_asociados_coas",
+          "args": {
+            "query": {
+              "$matchType": "semantic",
+              "$matchValue": "",
+              "$originalValue": "¿cuáles son los comercios asociados?"
+            }
+          },
+          "displayName": "pdf_comercios_asociados_coas"
+        },
+        "mockToolResponse": {
+          "response": {
+            "output": {
+              "result": "Los comercios asociados a Tarjeta Hites incluyen farmacias Cruz Verde, supermercados Unimarc y tiendas Easy."
+            }
+          }
+        }
+      }
+    }, {
+      "toolExpectation": {
+        "expectedToolCall": {
+          "tool": "ending_session",
+          "args": {
+          },
+          "displayName": "ending_session"
+        },
+        "mockToolResponse": {
+          "response": {
+            "output": {
+              "agent_action": "Llama de inmediato a la herramienta transfer_to_agent(agent_name\u003d\u0027Maria_Root_Agent\u0027) de forma 100% silenciosa para retornar el control al orquestador, sin generar ningún texto o voz en tu respuesta.",
+              "result": "Success: La sesión ha sido marcada para finalizar de forma segura."
+            }
+          }
+        }
+      }
+    }, {
+      "toolExpectation": {
+        "expectedToolCall": {
+          "tool": "end_session",
+          "args": {
+            "session_escalated": true
+          },
+          "displayName": "end_session"
+        }
+      }
+    }],
+    "userFacts": [{
+      "name": "rut",
+      "value": "144127633"
+    }],
+    "maxTurns": 5,
+    "variableOverrides": {
+      "callid": 1.23456789E8
+    },
+    "taskCompletionBehavior": "TASK_SATISFIED",
+    "userGoalBehavior": "USER_GOAL_SATISFIED"
+  }
+}
