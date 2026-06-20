@@ -3,6 +3,7 @@
   "displayName": "Consulta Estado Tarjeta",
   "scenario": {
     "task": "Pregunta directamente: quiero ver el estado de mi tarjeta.\nCuando te pida el RUT, ingresa: 144127633.\nCuando te pida el PIN de seguridad, ingresa: 4321.",
+    "rubrics": [],
     "scenarioExpectations": [{
       "agentResponse": {
         "chunks": [{

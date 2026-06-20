@@ -16,6 +16,13 @@
             }
           },
           "displayName": "txt_base_conocimientos"
+        },
+        "mock_tool_response": {
+          "response": {
+            "output": {
+              "result": "Para compras con retiro en tienda, las anulaciones en línea se pueden realizar dentro de los 10 días siguientes a la compra, o contactando a un ejecutivo si el plazo expiró."
+            }
+          }
         }
       }
     }, {
@@ -23,6 +30,11 @@
         "expectedToolCall": {
           "tool": "transfer_agent",
           "displayName": "transfer_agent"
+        },
+        "mock_tool_response": {
+          "response": {
+            "output": {}
+          }
         }
       }
     }],

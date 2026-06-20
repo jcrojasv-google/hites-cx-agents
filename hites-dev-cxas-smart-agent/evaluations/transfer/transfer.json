@@ -2,6 +2,7 @@
   "name": "e6c7d50d-bb9d-40c3-8370-65da1b2d85b9",
   "displayName": "transfer",
   "scenario": {
+    "rubrics": [],
     "task": "Indicate that you want to talk to a human agent.\nIF asked for a RUT indicate that you are not a client.\n",
     "scenarioExpectations": [{
       "agentResponse": {
@@ -17,6 +18,11 @@
             "queue": "Prueba"
           },
           "displayName": "transfer_agent"
+        },
+        "mock_tool_response": {
+          "response": {
+            "output": {}
+          }
         }
       }
     }],

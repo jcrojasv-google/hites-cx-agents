@@ -3,6 +3,7 @@
   "displayName": "Consulta Sucursales",
   "scenario": {
     "task": "Pregunta directamente al asistente: ¿dónde hay una tienda en Curicó?",
+    "rubrics": [],
     "scenarioExpectations": [{
       "toolExpectation": {
         "expectedToolCall": {
@@ -15,6 +16,13 @@
             }
           },
           "displayName": "pdf_sucursales"
+        },
+        "mock_tool_response": {
+          "response": {
+            "output": {
+              "result": "La tienda Hites en Curicó está ubicada en Arturo Prat #455 y atiende de Lunes a Domingo de 10:00 a 20:00 hrs."
+            }
+          }
         }
       }
     }],
