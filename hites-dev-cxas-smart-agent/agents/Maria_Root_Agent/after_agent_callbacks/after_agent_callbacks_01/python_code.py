@@ -1,3 +1,5 @@
+from typing import Optional
+
 def after_agent_callback(callback_context: CallbackContext) -> Optional[Content]:
   """
   Executes after the agent finishes, but before the result is returned to the user.
