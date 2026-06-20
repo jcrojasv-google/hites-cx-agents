@@ -77,7 +77,7 @@
         "url": "https://bloqueo-tarjeta--webhook-751016191549.us-central1.run.app"
       }
     },
-    "ccai-call-writer": {
+    "ccai_call_writer": {
       "openApiToolset": {
         "url": "https://ccai-call-writer-751016191549.us-central1.run.app"
       }

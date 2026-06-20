@@ -21,7 +21,7 @@
     "description": "Finaliza post transferencia"
   }],
   "toolsets": [{
-    "toolset": "ccai-call-writer",
+    "toolset": "ccai_call_writer",
     "toolIds": ["saveCallContext"]
   }, {
     "toolset": "valida_cliente_hites",
