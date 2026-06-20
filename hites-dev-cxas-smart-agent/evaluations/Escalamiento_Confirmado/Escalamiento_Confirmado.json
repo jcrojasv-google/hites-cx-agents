@@ -3,6 +3,7 @@
   "displayName": "Escalamiento Confirmado",
   "scenario": {
     "task": "Pregunta directamente: ¿cómo puedo anular mi compra de retiro en tienda?\nCuando el asistente te pida confirmar el escalamiento, responde: Sí, conéctame por favor.",
+    "rubrics": [],
     "scenarioExpectations": [{
       "toolExpectation": {
         "expectedToolCall": {

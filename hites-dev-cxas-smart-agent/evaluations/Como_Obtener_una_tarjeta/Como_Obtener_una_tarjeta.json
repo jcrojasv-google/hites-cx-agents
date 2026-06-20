@@ -3,6 +3,7 @@
   "displayName": "Como Obtener una tarjeta",
   "scenario": {
     "task": "Esperar a que te salude y te solicite tu RUT.\nLuego Indica tu RUT Luego.\npregunta \"Como puedo obtener una tarjeta?\"",
+    "rubrics": [],
     "scenarioExpectations": [{
       "agentResponse": {
         "chunks": [{
