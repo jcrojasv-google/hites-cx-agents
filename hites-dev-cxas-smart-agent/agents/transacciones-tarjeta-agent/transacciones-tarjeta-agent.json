@@ -2,7 +2,7 @@
   "name": "d5b69f8e-c892-4a57-a708-c24e6d4bd8af",
   "displayName": "transacciones-tarjeta-agent",
   "instruction": "agents/transacciones-tarjeta-agent/instruction.txt",
-  "tools": ["end_session"],
+  "tools": ["end_session", "ending_session"],
   "toolsets": [{
     "toolset": "consulta_deuda",
     "toolIds": ["consultarDeuda"]
