@@ -22,6 +22,13 @@
             "rewrittenQueries": []
           },
           "displayName": "txt_base_conocimientos"
+        },
+        "mockToolResponse": {
+          "response": {
+            "output": {
+              "result": "Para obtener la tarjeta Hites, debes dirigirte a cualquier tienda Hites con tu cédula de identidad vigente y ser mayor de 21 años."
+            }
+          }
         }
       }
     }],

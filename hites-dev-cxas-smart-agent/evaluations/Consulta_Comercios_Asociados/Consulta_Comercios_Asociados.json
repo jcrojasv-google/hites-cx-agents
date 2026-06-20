@@ -1,0 +1,39 @@
+{
+  "name": "f1e2d3c4-b5a6-7988-9d0e-1f2a3b4c5d6e",
+  "displayName": "Consulta Comercios Asociados",
+  "scenario": {
+    "task": "Pregunta directamente al asistente: ¿cuáles son los comercios asociados?",
+    "scenarioExpectations": [{
+      "toolExpectation": {
+        "expectedToolCall": {
+          "tool": "pdf_comercios_asociados_coas",
+          "args": {
+            "query": {
+              "$matchType": "semantic",
+              "$matchValue": "",
+              "$originalValue": "¿cuáles son los comercios asociados?"
+            }
+          },
+          "displayName": "pdf_comercios_asociados_coas"
+        },
+        "mockToolResponse": {
+          "response": {
+            "output": {
+              "result": "Los comercios asociados a Tarjeta Hites incluyen farmacias Cruz Verde, supermercados Unimarc y tiendas Easy."
+            }
+          }
+        }
+      }
+    }],
+    "userFacts": [{
+      "name": "rut",
+      "value": "144127633"
+    }],
+    "maxTurns": 3,
+    "variableOverrides": {
+      "callid": 1.23456789E8
+    },
+    "taskCompletionBehavior": "TASK_SATISFIED",
+    "userGoalBehavior": "USER_GOAL_SATISFIED"
+  }
+}

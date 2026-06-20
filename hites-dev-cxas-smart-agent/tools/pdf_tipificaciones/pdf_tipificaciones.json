@@ -2,6 +2,7 @@
   "name": "d7ef665a-5f96-418c-a234-77baa46ac158",
   "dataStoreTool": {
     "name": "pdf_tipificaciones",
+    "description": "Recupera datos de clasificación (nroCampana, codTipificacion y queue) basados en la consulta del usuario antes de transferir a un ejecutivo.",
     "engineSource": {
       "dataStoreSources": [{
         "dataStore": {

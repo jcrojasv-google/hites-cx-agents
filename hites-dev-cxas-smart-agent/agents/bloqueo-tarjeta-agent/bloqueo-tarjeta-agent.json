@@ -2,7 +2,7 @@
   "name": "1f5b1f72-2423-4cab-81b8-624086d9545e",
   "displayName": "bloqueo-tarjeta-agent",
   "instruction": "agents/bloqueo-tarjeta-agent/instruction.txt",
-  "tools": ["end_session"],
+  "tools": ["end_session", "ending_session"],
   "toolsets": [{
     "toolset": "bloqueo_tarjeta",
     "toolIds": ["blockCard"]

@@ -1,6 +1,0 @@
-{
-  "name": "a9b7733e-28dc-452f-825b-66f060b688b8",
-  "displayName": "base-conocimientos-agent",
-  "instruction": "agents/base-conocimientos-agent/instruction.txt",
-  "tools": ["end_session", "txt_base_conocimientos"]
-}

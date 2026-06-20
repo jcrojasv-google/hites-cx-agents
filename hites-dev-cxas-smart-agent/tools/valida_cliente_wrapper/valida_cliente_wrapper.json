@@ -1,0 +1,10 @@
+{
+  "name": "c7b7d6e5-4a3b-2c1d-0e9f-8a7b6c5d4e3f",
+  "pythonFunction": {
+    "name": "valida_cliente_wrapper",
+    "pythonCode": "tools/valida_cliente_wrapper/python_function/python_code.py",
+    "description": "Valida el RUT y verifica si es cliente de Hites de forma consolidada.\nRetorna un diccionario estructurado con el resultado y actualiza el estado."
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "valida_cliente_wrapper"
+}

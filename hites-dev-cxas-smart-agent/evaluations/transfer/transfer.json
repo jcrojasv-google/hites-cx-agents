@@ -17,6 +17,12 @@
             "queue": "Prueba"
           },
           "displayName": "transfer_agent"
+        },
+        "mockToolResponse": {
+          "response": {
+            "output": {
+            }
+          }
         }
       }
     }],

@@ -1,7 +1,7 @@
 {
   "name": "fa3de984-bac0-48f0-976f-1e1713491337",
   "displayName": "hites-dev-cxas-smart-agent",
-  "rootAgent": "Maria Root Agent",
+  "rootAgent": "Maria_Root_Agent",
   "audioProcessingConfig": {
     "synthesizeSpeechConfigs": {
       "es-US": {
@@ -11,13 +11,14 @@
     },
     "bargeInConfig": {
     },
-    "inactivityTimeout": "10s",
+    "inactivityTimeout": "15s",
     "ambientSoundConfig": {
       "volumeGainDb": -45.7
     }
   },
   "loggingSettings": {
     "redactionConfig": {
+      "enableRedaction": true,
       "inspectTemplate": "$env_var",
       "deidentifyTemplate": "$env_var"
     },
@@ -34,10 +35,6 @@
     "conversationLoggingSettings": {
       "retentionWindow": "31536000s"
     },
-    "evaluationAudioRecordingConfig": {
-      "gcsBucket": "$env_var",
-      "gcsPathPrefix": "/evaluations/$date/$session"
-    },
     "metricAnalysisSettings": {
     }
   },
@@ -47,22 +44,83 @@
   },
   "variableDeclarations": [{
     "name": "ANI",
+    "description": "Número telefónico del cliente (Automatic Number Identification)",
     "schema": {
-      "type": "STRING"
+      "type": "STRING",
+      "default": null
     }
   }, {
     "name": "TELEPHONY_PAYLOAD",
     "description": "variable para traspaso de llamada a un agente humano",
     "schema": {
-      "type": "OBJECT"
+      "type": "OBJECT",
+      "default": null
     }
   }, {
     "name": "callid",
+    "description": "Identificador único de la llamada telefónica",
     "schema": {
-      "type": "NUMBER"
+      "type": "NUMBER",
+      "default": null
+    }
+  }, {
+    "name": "codigo_cliente",
+    "description": "Código interno o identificador único del cliente en Hites",
+    "schema": {
+      "type": "STRING",
+      "default": ""
+    }
+  }, {
+    "name": "es_cliente_hites",
+    "description": "Indica si el RUT pertenece a un cliente de Tarjeta Hites (\u0027true\u0027 o \u0027false\u0027)",
+    "schema": {
+      "type": "STRING",
+      "default": "false"
+    }
+  }, {
+    "name": "intentos_fallidos",
+    "description": "Contador de intentos fallidos al ingresar el RUT (máximo 2)",
+    "schema": {
+      "type": "STRING",
+      "default": "0"
+    }
+  }, {
+    "name": "nombre_cliente",
+    "description": "Primer nombre o nombre de pila del cliente para saludos personalizados",
+    "schema": {
+      "type": "STRING",
+      "default": ""
+    }
+  }, {
+    "name": "nombre_completo_cliente",
+    "description": "Nombre completo oficial del cliente devuelto por la API",
+    "schema": {
+      "type": "STRING",
+      "default": ""
+    }
+  }, {
+    "name": "nombre_extraido",
+    "schema": {
+      "type": "STRING",
+      "default": ""
+    }
+  }, {
+    "name": "rut",
+    "description": "RUT del usuario formateado y limpio (sin puntos ni guiones)",
+    "schema": {
+      "type": "STRING",
+      "default": ""
+    }
+  }, {
+    "name": "rut_valido",
+    "description": "Indica si el RUT ingresado es sintácticamente válido (\u0027true\u0027 o \u0027false\u0027)",
+    "schema": {
+      "type": "STRING",
+      "default": "false"
     }
   }, {
     "name": "session_id",
+    "description": "ID único de la sesión conversacional de Dialogflow",
     "schema": {
       "type": "STRING",
       "default": ""

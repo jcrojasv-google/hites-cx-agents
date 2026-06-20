@@ -30,12 +30,8 @@ def before_model_callback(callback_context: CallbackContext, llm_request: LlmReq
     # ── Lógica original de ending_session ────────────────────────────────────
     ending_session = callback_context.variables.get("ending_session", "")
     if ending_session:
-        print("ending session")
+        print("ending session - intercepting and executing end_session")
         payload = {"ujet": {"type": "action", "action": "end"}}
         callback_context.set_variable("TELEPHONY_PAYLOAD", payload)
-        # return LlmResponse.from_parts(parts=[
-        #          Part.from_text("Gracias por llamar a Líder BCI."),
-        #          get_payload_part(payload_json_string)
-        #     ])
 
     return None

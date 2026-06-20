@@ -2,7 +2,7 @@
   "name": "e5b87e20-dc1f-4718-8c2c-8235c12fa500",
   "displayName": "tracking-agent",
   "instruction": "agents/tracking-agent/instruction.txt",
-  "tools": ["end_session"],
+  "tools": ["end_session", "ending_session"],
   "toolsets": [{
     "toolset": "tracking_orden",
     "toolIds": ["trackOrder"]

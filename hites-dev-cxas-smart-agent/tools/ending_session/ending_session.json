@@ -2,7 +2,8 @@
   "name": "e806aa03-7d0f-4b55-99bb-c085bad88a06",
   "pythonFunction": {
     "name": "ending_session",
-    "pythonCode": "tools/ending_session/python_function/python_code.py"
+    "pythonCode": "tools/ending_session/python_function/python_code.py",
+    "description": "Establece la bandera de finalización de sesión en el estado de la llamada.\nRetorna un diccionario estructurado indicando el éxito o instruyendo al agente en caso de error."
   },
   "executionType": "SYNCHRONOUS",
   "displayName": "ending_session"

@@ -4,6 +4,7 @@
   "enabled": true,
   "action": {
     "generativeAnswer": {
+      "prompt": "Genera una respuesta muy educada, profesional y concisa en español indicando al usuario que no puedes responder a comentarios, lenguaje o consultas inapropiadas por políticas de seguridad de la tienda Hites. Luego, pregúntale de forma amable en qué más le puedes ayudar con sus consultas generales sobre Hites."
     }
   },
   "modelSafety": {

@@ -1,8 +1,8 @@
 {
   "name": "8945d543-9d99-4a4b-a965-e1a0a846a98c",
-  "displayName": "ccai-call-writer",
+  "displayName": "ccai_call_writer",
   "openApiToolset": {
-    "openApiSchema": "toolsets/ccai-call-writer/open_api_toolset/open_api_schema.yaml",
+    "openApiSchema": "toolsets/ccai_call_writer/open_api_toolset/open_api_schema.yaml",
     "apiAuthentication": {
       "serviceAgentIdTokenAuthConfig": {
       }

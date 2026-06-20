@@ -2,6 +2,7 @@
   "name": "83dd0171-a8b3-4593-be2c-eb960a1ec99d",
   "dataStoreTool": {
     "name": "pdf_retiro_alternativos",
+    "description": "Recupera información sobre puntos de retiro alternativos de compras web (ej: Starken, Correos de Chile), plazos y condiciones asociadas.",
     "engineSource": {
       "dataStoreSources": [{
         "dataStore": {
