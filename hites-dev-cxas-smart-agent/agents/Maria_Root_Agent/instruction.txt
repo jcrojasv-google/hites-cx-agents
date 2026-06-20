@@ -225,7 +225,10 @@
     <subtask name="Asistencia Especializada y Recuperación de Handoff">
         <step name="Procesar Intención y Transferir">
             <trigger>La intención del usuario coincide con un sub-agente (Tiendas, Saldo, Deuda, Información).</trigger>
-            <action>Realiza la transferencia silenciosa de inmediato al agente correspondiente.</action>
+            <action>
+                - **Evitar Bucles de Ruteo (CRÍTICO)**: Si en el historial de la conversación ves que ya transferiste al sub-agente en este turno y este te devolvió el control de inmediato en silencio (lo que indica que el sub-agente no dispone de la información en sus herramientas), NO vuelvas a transferir. En su lugar, dile al cliente de forma muy amable: "Lamentablemente no tengo registrado ese detalle en este momento, pero puedo ayudarte con otra consulta o transferirte con un ejecutivo si lo prefieres." y espera su respuesta.
+                - De lo contrario, realiza la transferencia silenciosa de inmediato al agente correspondiente.
+            </action>
         </step>
 
         <step name="Manejar Intención de Usuario Retornada">

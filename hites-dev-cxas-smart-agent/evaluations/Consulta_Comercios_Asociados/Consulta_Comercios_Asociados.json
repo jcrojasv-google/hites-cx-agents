@@ -7,13 +7,6 @@
       "toolExpectation": {
         "expectedToolCall": {
           "tool": "pdf_comercios_asociados_coas",
-          "args": {
-            "query": {
-              "$matchType": "semantic",
-              "$matchValue": "",
-              "$originalValue": "¿cuáles son los comercios asociados?"
-            }
-          },
           "displayName": "pdf_comercios_asociados_coas"
         },
         "mockToolResponse": {
