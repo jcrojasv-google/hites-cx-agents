@@ -1,9 +1,0 @@
-{
-  "name": "edc33421-6c70-4774-bcbd-dbb82a8b1ed0",
-  "pythonFunction": {
-    "name": "cortar_llamada_mmr",
-    "pythonCode": "tools/cortar_llamada_mmr/python_function/python_code.py"
-  },
-  "executionType": "SYNCHRONOUS",
-  "displayName": "cortar_llamada_mmr"
-}
