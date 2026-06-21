@@ -2,44 +2,41 @@
   "name": "943618ff-4b13-4961-b7fd-fb874b04c524",
   "displayName": "Como Obtener una tarjeta",
   "scenario": {
-    "task": "Esperar a que te salude y te solicite tu RUT.\nLuego Indica tu RUT Luego.\npregunta \"Como puedo obtener una tarjeta?\"",
-    "scenarioExpectations": [{
-      "agentResponse": {
-        "chunks": [{
-          "text": "En que te puedo ayudar?"
-        }]
-      }
-    }, {
-      "toolExpectation": {
-        "expectedToolCall": {
-          "tool": "txt_base_conocimientos",
-          "args": {
-            "query": {
-              "$matchType": "semantic",
-              "$matchValue": "",
-              "$originalValue": "Como puedo obtener una tarjeta?"
-            },
-            "rewrittenQueries": []
+    "task": "Pregunta al asistente: 'Hola, me interesa obtener la Tarjeta Hites. ¿Cuáles son los requisitos que debo cumplir y a través de qué canales la puedo solicitar?'. El asistente debe buscar en sus herramientas informativas y entregarte los requisitos clave de postulación (como edad mínima, ingresos mínimos, nacionalidad/residencia y comportamiento comercial) y los canales de solicitud oficiales (tiendas físicas y web). Una vez que te entregue esta información de forma concisa, agradécele y finaliza la conversación indicando que no necesitas más ayuda.",
+    "scenarioExpectations": [
+      {
+        "toolExpectation": {
+          "expectedToolCall": {
+            "tool": "txt_base_conocimientos",
+            "displayName": "txt_base_conocimientos"
           },
-          "displayName": "txt_base_conocimientos"
-        },
-        "mockToolResponse": {
-          "response": {
-            "output": {
-              "result": "Para obtener la tarjeta Hites, debes dirigirte a cualquier tienda Hites con tu cédula de identidad vigente y ser mayor de 21 años."
+          "mockToolResponse": {
+            "tool": "txt_base_conocimientos",
+            "displayName": "txt_base_conocimientos",
+            "response": {
+              "answer": "Para la aprobación de la apertura de la Tarjeta Hites se requiere: Cédula de Identidad en buen estado y vigente, nacionalidad chilena o extranjera con residencia en el país, edad entre 21 y 77 años, no presentar informes comerciales negativos (Dicom) y contar con un teléfono personal. Si trabajas de manera independiente, debes presentar Cédula de Identidad, Iniciación de actividades del SII, última Declaración de Impuesto a la Renta y los últimos 6 meses de boletas de honorarios. Puedes solicitar la tarjeta a través de la App Tarjeta Hites, en nuestro sitio web oficial o de forma presencial en las sucursales/tiendas Hites."
             }
           }
         }
+      },
+      {
+        "toolExpectation": {
+          "expectedToolCall": {
+            "tool": "ending_session",
+            "displayName": "ending_session"
+          }
+        }
+      },
+      {
+        "toolExpectation": {
+          "expectedToolCall": {
+            "tool": "end_session",
+            "displayName": "end_session"
+          }
+        }
       }
-    }],
-    "userFacts": [{
-      "name": "rut",
-      "value": "144127633"
-    }, {
-      "name": "current_date",
-      "value": "2026-06-01"
-    }],
-    "maxTurns": 10,
+    ],
+    "maxTurns": 5,
     "variableOverrides": {
       "callid": 1.23456789E8,
       "current_date": "2026-06-01[America/Los_Angeles]"

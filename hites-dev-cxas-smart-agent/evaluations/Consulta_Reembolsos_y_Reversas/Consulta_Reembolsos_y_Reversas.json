@@ -2,39 +2,33 @@
   "name": "d8e7f6a5-c4b3-4988-9d0e-1f2a3b4c5d6e",
   "displayName": "Consulta Reembolsos y Reversas",
   "scenario": {
-    "task": "Pregunta al asistente: 'Hola, compré un producto por internet hace unos días y cancelé la compra. ¿Cuándo me devolverán el dinero o harán la reversa?'. El asistente DEBE buscar en sus herramientas y realizarte una pregunta proactiva de desambiguación para aclarar qué medio de pago utilizaste. Responde que pagaste con tu Tarjeta Hites. El asistente debe entregarte el plazo exacto de devolución o reversa para compras online pagadas con Tarjeta Hites. Finalmente, finaliza la conversación agradeciendo y despidiéndote.",
-    "scenarioExpectations": [
-      {
-        "toolExpectation": {
-          "expectedToolCall": {
-            "tool": "txt_base_conocimientos",
-            "displayName": "txt_base_conocimientos"
-          }
-        }
-      },
-      {
-        "toolExpectation": {
-          "expectedToolCall": {
-            "tool": "ending_session",
-            "displayName": "ending_session"
-          }
-        }
-      },
-      {
-        "toolExpectation": {
-          "expectedToolCall": {
-            "tool": "end_session",
-            "displayName": "end_session"
-          }
+    "task": "Pregunta al asistente: \u0027Hola, compré un producto por internet hace unos días y cancelé la compra. ¿Cuándo me devolverán el dinero o harán la reversa?\u0027. El asistente DEBE buscar en sus herramientas y realizarte una pregunta proactiva de desambiguación para aclarar qué medio de pago utilizaste. Responde que pagaste con tu Tarjeta Hites. El asistente debe entregarte el plazo exacto de devolución o reversa para compras online pagadas con Tarjeta Hites. Finalmente, finaliza la conversación agradeciendo y despidiéndote.",
+    "scenarioExpectations": [{
+      "toolExpectation": {
+        "expectedToolCall": {
+          "tool": "txt_base_conocimientos",
+          "displayName": "txt_base_conocimientos"
         }
       }
-    ],
-    "userFacts": [
-      {
-        "name": "rut",
-        "value": "144127633"
+    }, {
+      "toolExpectation": {
+        "expectedToolCall": {
+          "tool": "ending_session",
+          "displayName": "ending_session"
+        }
       }
-    ],
+    }, {
+      "toolExpectation": {
+        "expectedToolCall": {
+          "tool": "end_session",
+          "displayName": "end_session"
+        }
+      }
+    }],
+    "userFacts": [{
+      "name": "rut",
+      "value": "144127633"
+    }],
     "maxTurns": 4,
     "variableOverrides": {
       "callid": 1.23456789E8
