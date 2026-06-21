@@ -3,38 +3,32 @@
   "displayName": "Consulta Puntos Retiro Alternativos",
   "scenario": {
     "task": "Pregunta al asistente si existen puntos de retiro alternativos para compras web (como Starken o ChilePost) porque te queda lejos la tienda. Luego, consulta por los plazos de retiro en Starken. Finalmente, finaliza la conversación agradeciendo y diciendo que eso es todo.",
-    "scenarioExpectations": [
-      {
-        "toolExpectation": {
-          "expectedToolCall": {
-            "tool": "pdf_retiro_alternativos",
-            "displayName": "pdf_retiro_alternativos"
-          }
-        }
-      },
-      {
-        "toolExpectation": {
-          "expectedToolCall": {
-            "tool": "ending_session",
-            "displayName": "ending_session"
-          }
-        }
-      },
-      {
-        "toolExpectation": {
-          "expectedToolCall": {
-            "tool": "end_session",
-            "displayName": "end_session"
-          }
+    "scenarioExpectations": [{
+      "toolExpectation": {
+        "expectedToolCall": {
+          "tool": "pdf_retiro_alternativos",
+          "displayName": "pdf_retiro_alternativos"
         }
       }
-    ],
-    "userFacts": [
-      {
-        "name": "rut",
-        "value": "144127633"
+    }, {
+      "toolExpectation": {
+        "expectedToolCall": {
+          "tool": "ending_session",
+          "displayName": "ending_session"
+        }
       }
-    ],
+    }, {
+      "toolExpectation": {
+        "expectedToolCall": {
+          "tool": "end_session",
+          "displayName": "end_session"
+        }
+      }
+    }],
+    "userFacts": [{
+      "name": "rut",
+      "value": "144127633"
+    }],
     "maxTurns": 4,
     "variableOverrides": {
       "callid": 1.23456789E8

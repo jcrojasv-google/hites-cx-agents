@@ -2,7 +2,5 @@
   "name": "6cc8fa1a-b6ba-4ceb-a3f7-b783f904608a",
   "displayName": "reparacion-producto-agent",
   "instruction": "agents/reparacion-producto-agent/instruction.txt",
-  "tools": [
-    "end_session"
-  ]
+  "tools": ["end_session"]
 }

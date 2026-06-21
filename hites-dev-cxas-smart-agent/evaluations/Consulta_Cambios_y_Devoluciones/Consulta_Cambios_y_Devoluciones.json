@@ -2,39 +2,33 @@
   "name": "c7d6e5f4-b3a2-4988-9d0e-1f2a3b4c5d6e",
   "displayName": "Consulta Cambios y Devoluciones",
   "scenario": {
-    "task": "Pregunta al asistente: 'Hola, compré un producto hace unos días y lo quiero cambiar. ¿Cómo lo hago?'. El asistente DEBE buscar en sus herramientas y realizarte una pregunta proactiva de desambiguación para aclarar si el cambio es por falla técnica o por talla/insatisfacción, y si el producto es de gran tamaño o pequeño. Responde que es por cambio de talla de unas zapatillas (producto pequeño). El asistente debe darte las instrucciones exactas de cambio para este caso (30 días, tienda física, producto sellado, etc.). Finalmente, finaliza la conversación agradeciendo y despidiéndote.",
-    "scenarioExpectations": [
-      {
-        "toolExpectation": {
-          "expectedToolCall": {
-            "tool": "txt_base_conocimientos",
-            "displayName": "txt_base_conocimientos"
-          }
-        }
-      },
-      {
-        "toolExpectation": {
-          "expectedToolCall": {
-            "tool": "ending_session",
-            "displayName": "ending_session"
-          }
-        }
-      },
-      {
-        "toolExpectation": {
-          "expectedToolCall": {
-            "tool": "end_session",
-            "displayName": "end_session"
-          }
+    "task": "Pregunta al asistente: \u0027Hola, compré un producto hace unos días y lo quiero cambiar. ¿Cómo lo hago?\u0027. El asistente DEBE buscar en sus herramientas y realizarte una pregunta proactiva de desambiguación para aclarar si el cambio es por falla técnica o por talla/insatisfacción, y si el producto es de gran tamaño o pequeño. Responde que es por cambio de talla de unas zapatillas (producto pequeño). El asistente debe darte las instrucciones exactas de cambio para este caso (30 días, tienda física, producto sellado, etc.). Finalmente, finaliza la conversación agradeciendo y despidiéndote.",
+    "scenarioExpectations": [{
+      "toolExpectation": {
+        "expectedToolCall": {
+          "tool": "txt_base_conocimientos",
+          "displayName": "txt_base_conocimientos"
         }
       }
-    ],
-    "userFacts": [
-      {
-        "name": "rut",
-        "value": "144127633"
+    }, {
+      "toolExpectation": {
+        "expectedToolCall": {
+          "tool": "ending_session",
+          "displayName": "ending_session"
+        }
       }
-    ],
+    }, {
+      "toolExpectation": {
+        "expectedToolCall": {
+          "tool": "end_session",
+          "displayName": "end_session"
+        }
+      }
+    }],
+    "userFacts": [{
+      "name": "rut",
+      "value": "144127633"
+    }],
     "maxTurns": 4,
     "variableOverrides": {
       "callid": 1.23456789E8
