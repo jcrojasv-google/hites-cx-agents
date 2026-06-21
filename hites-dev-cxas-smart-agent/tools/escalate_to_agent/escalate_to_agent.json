@@ -2,7 +2,8 @@
   "name": "866eabec-1f03-4365-aa47-cb7efaf774a1",
   "pythonFunction": {
     "name": "escalate_to_agent",
-    "pythonCode": "tools/escalate_to_agent/python_function/python_code.py"
+    "pythonCode": "tools/escalate_to_agent/python_function/python_code.py",
+    "description": "Transfiere la conversación de forma inmediata a un ejecutivo de atención al cliente humano. Utilízala únicamente cuando el usuario solicite explícitamente hablar con un humano, o cuando las políticas del negocio indiquen realizar una derivación directa."
   },
   "executionType": "SYNCHRONOUS",
   "displayName": "escalate_to_agent"

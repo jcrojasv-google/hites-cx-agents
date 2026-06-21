@@ -1,36 +1,6 @@
 import json
 import re
 
-def get_response_data(resp) -> dict:
-    """
-    Extrae el diccionario de datos de un objeto de respuesta de forma robusta.
-    Soporta diccionarios nativos, métodos .json() y múltiples atributos del SDK de Google.
-    """
-    if isinstance(resp, dict):
-        return resp
-    if resp is None:
-        return {}
-        
-    # 1. Probar método nativo .json() (estándar en wrappers de respuesta)
-    if hasattr(resp, "json") and callable(resp.json):
-        try:
-            return resp.json()
-        except:
-            pass
-            
-    # 2. Probar atributos de des-serialización comunes
-    for attr in ["response", "output", "content", "data"]:
-        val = getattr(resp, attr, None)
-        if val is not None:
-            if isinstance(val, dict):
-                return val
-            if isinstance(val, str):
-                try:
-                    return json.loads(val)
-                except:
-                    pass
-    return {}
-
 def valida_cliente_wrapper(rut: str = "") -> dict:
     """
     Valida el RUT y verifica si es cliente de Hites de forma consolidada.
@@ -106,3 +76,33 @@ def valida_cliente_wrapper(rut: str = "") -> dict:
     
     print(f"[valida_cliente_wrapper Success] {response_data}")
     return response_data
+
+def get_response_data(resp) -> dict:
+    """
+    Extrae el diccionario de datos de un objeto de respuesta de forma robusta.
+    Soporta diccionarios nativos, métodos .json() y múltiples atributos del SDK de Google.
+    """
+    if isinstance(resp, dict):
+        return resp
+    if resp is None:
+        return {}
+        
+    # 1. Probar método nativo .json() (estándar en wrappers de respuesta)
+    if hasattr(resp, "json") and callable(resp.json):
+        try:
+            return resp.json()
+        except:
+            pass
+            
+    # 2. Probar atributos de des-serialización comunes
+    for attr in ["response", "output", "content", "data"]:
+        val = getattr(resp, attr, None)
+        if val is not None:
+            if isinstance(val, dict):
+                return val
+            if isinstance(val, str):
+                try:
+                    return json.loads(val)
+                except:
+                    pass
+    return {}
