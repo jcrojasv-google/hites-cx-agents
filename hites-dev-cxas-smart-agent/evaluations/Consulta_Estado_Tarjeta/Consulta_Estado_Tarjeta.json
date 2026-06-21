@@ -2,35 +2,121 @@
   "name": "b2c3d4e5-f6a7-8b9c-0d1e-2f3a4b5c6d7e",
   "displayName": "Consulta Estado Tarjeta",
   "scenario": {
-    "task": "Pregunta directamente: quiero ver el estado de mi tarjeta.\nCuando te pida el RUT, ingresa: 144127633.\nCuando te pida el PIN de seguridad, ingresa: 4321.",
-    "scenarioExpectations": [{
-      "agentResponse": {
-        "chunks": [{
-          "text": "RUT"
-        }]
+    "task": "Pregunta directamente: 'Hola, quiero ver el estado de mi tarjeta.'. Cuando te pida el RUT, indícale '144127633'. Cuando te pida tu PIN de seguridad, indícale '4321'. El asistente debe entregarte de forma segura tu cupo y tu saldo. Finalmente, finaliza la conversación agradeciendo y despidiéndote.",
+    "scenarioExpectations": [
+      {
+        "agentResponse": {
+          "chunks": [
+            {
+              "text": "RUT"
+            }
+          ]
+        }
+      },
+      {
+        "toolExpectation": {
+          "expectedToolCall": {
+            "tool": "valida_cliente_wrapper"
+          }
+        }
+      },
+      {
+        "toolExpectation": {
+          "expectedToolCall": {
+            "tool": "validarRut"
+          },
+          "mockToolResponse": {
+            "tool": "validarRut",
+            "response": {
+              "session_info": {
+                "parameters": {
+                  "rut_valido": true
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "toolExpectation": {
+          "expectedToolCall": {
+            "tool": "validarCliente"
+          },
+          "mockToolResponse": {
+            "tool": "validarCliente",
+            "response": {
+              "session_info": {
+                "parameters": {
+                  "es_cliente_hites": true,
+                  "nombreCliente": "Juan",
+                  "nombreCompletoCliente": "Juan Pérez",
+                  "codigoCliente": "987654"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "agentResponse": {
+          "chunks": [
+            {
+              "text": "PIN"
+            }
+          ]
+        }
+      },
+      {
+        "toolExpectation": {
+          "expectedToolCall": {
+            "tool": "consultarSaldo"
+          },
+          "mockToolResponse": {
+            "tool": "consultarSaldo",
+            "response": {
+              "session_info": {
+                "parameters": {
+                  "cupo": "300000",
+                  "saldo": "50000",
+                  "nombreCliente": "Juan Pérez",
+                  "codigoRespuestaDeuda": "00"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "agentResponse": {
+          "chunks": [
+            {
+              "text": "Saldo"
+            },
+            {
+              "text": "Cupo"
+            }
+          ]
+        }
+      },
+      {
+        "toolExpectation": {
+          "expectedToolCall": {
+            "tool": "ending_session"
+          }
+        }
+      },
+      {
+        "toolExpectation": {
+          "expectedToolCall": {
+            "tool": "end_session"
+          }
+        }
       }
-    }, {
-      "agentResponse": {
-        "chunks": [{
-          "text": "PIN"
-        }]
-      }
-    }, {
-      "agentResponse": {
-        "chunks": [{
-          "text": "Saldo"
-        }, {
-          "text": "Cupo"
-        }]
-      }
-    }],
-    "userFacts": [{
-      "name": "rut",
-      "value": "144127633"
-    }],
+    ],
     "maxTurns": 6,
     "variableOverrides": {
-      "callid": 1.23456789E8
+      "callid": 1.23456789E8,
+      "current_date": "2026-06-01[America/Los_Angeles]"
     },
     "taskCompletionBehavior": "TASK_SATISFIED",
     "userGoalBehavior": "USER_GOAL_SATISFIED"
