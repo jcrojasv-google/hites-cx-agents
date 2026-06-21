@@ -2,40 +2,36 @@
   "name": "943618ff-4b13-4961-b7fd-fb874b04c524",
   "displayName": "Como Obtener una tarjeta",
   "scenario": {
-    "task": "Pregunta al asistente: 'Hola, me interesa obtener la Tarjeta Hites. ¿Cuáles son los requisitos que debo cumplir y a través de qué canales la puedo solicitar?'. El asistente debe buscar en sus herramientas informativas y entregarte los requisitos clave de postulación (como edad mínima, ingresos mínimos, nacionalidad/residencia y comportamiento comercial) y los canales de solicitud oficiales (tiendas físicas y web). Una vez que te entregue esta información de forma concisa, agradécele y finaliza la conversación indicando que no necesitas más ayuda.",
-    "scenarioExpectations": [
-      {
-        "toolExpectation": {
-          "expectedToolCall": {
-            "tool": "txt_base_conocimientos",
-            "displayName": "txt_base_conocimientos"
+    "task": "Pregunta al asistente: \u0027Hola, me interesa obtener la Tarjeta Hites. ¿Cuáles son los requisitos que debo cumplir y a través de qué canales la puedo solicitar?\u0027. El asistente debe buscar en sus herramientas informativas y entregarte los requisitos clave de postulación (como edad mínima, ingresos mínimos, nacionalidad/residencia y comportamiento comercial) y los canales de solicitud oficiales (tiendas físicas y web). Una vez que te entregue esta información de forma concisa, agradécele y finaliza la conversación indicando que no necesitas más ayuda.",
+    "scenarioExpectations": [{
+      "toolExpectation": {
+        "expectedToolCall": {
+          "tool": "txt_base_conocimientos",
+          "displayName": "txt_base_conocimientos"
+        },
+        "mockToolResponse": {
+          "tool": "txt_base_conocimientos",
+          "response": {
+            "answer": "Para la aprobación de la apertura de la Tarjeta Hites se requiere: Cédula de Identidad en buen estado y vigente, nacionalidad chilena o extranjera con residencia en el país, edad entre 21 y 77 años, no presentar informes comerciales negativos (Dicom) y contar con un teléfono personal. Si trabajas de manera independiente, debes presentar Cédula de Identidad, Iniciación de actividades del SII, última Declaración de Impuesto a la Renta y los últimos 6 meses de boletas de honorarios. Puedes solicitar la tarjeta a través de la App Tarjeta Hites, en nuestro sitio web oficial o de forma presencial en las sucursales/tiendas Hites."
           },
-          "mockToolResponse": {
-            "tool": "txt_base_conocimientos",
-            "displayName": "txt_base_conocimientos",
-            "response": {
-              "answer": "Para la aprobación de la apertura de la Tarjeta Hites se requiere: Cédula de Identidad en buen estado y vigente, nacionalidad chilena o extranjera con residencia en el país, edad entre 21 y 77 años, no presentar informes comerciales negativos (Dicom) y contar con un teléfono personal. Si trabajas de manera independiente, debes presentar Cédula de Identidad, Iniciación de actividades del SII, última Declaración de Impuesto a la Renta y los últimos 6 meses de boletas de honorarios. Puedes solicitar la tarjeta a través de la App Tarjeta Hites, en nuestro sitio web oficial o de forma presencial en las sucursales/tiendas Hites."
-            }
-          }
-        }
-      },
-      {
-        "toolExpectation": {
-          "expectedToolCall": {
-            "tool": "ending_session",
-            "displayName": "ending_session"
-          }
-        }
-      },
-      {
-        "toolExpectation": {
-          "expectedToolCall": {
-            "tool": "end_session",
-            "displayName": "end_session"
-          }
+          "displayName": "txt_base_conocimientos"
         }
       }
-    ],
+    }, {
+      "toolExpectation": {
+        "expectedToolCall": {
+          "tool": "ending_session",
+          "displayName": "ending_session"
+        }
+      }
+    }, {
+      "toolExpectation": {
+        "expectedToolCall": {
+          "tool": "end_session",
+          "displayName": "end_session"
+        }
+      }
+    }],
     "maxTurns": 5,
     "variableOverrides": {
       "callid": 1.23456789E8,
