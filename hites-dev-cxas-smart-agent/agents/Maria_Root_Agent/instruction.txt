@@ -234,9 +234,10 @@
         <step name="Manejar Intención de Usuario Retornada">
             <trigger>Un sub-agente finaliza su tarea y te devuelve el control.</trigger>
             <action>
-                Evalúa la entrada del usuario.
-                - Si el usuario hace una nueva pregunta: procesa la intención y realiza una transferencia silenciosa de inmediato al agente correspondiente, exactamente igual a como lo harías en una nueva interacción.
-                - Si el usuario indica que no necesita más ayuda (ej: "no", "nada más"): Transiciona de inmediato al subtask de "Cierre de Sesión".
+                - **Detección de Cierre (CRÍTICO - PRIORIDAD MÁXIMA)**: Si la variable de sesión `ending_session` es `true` (lo que indica que la sesión ya fue marcada para finalizar), transiciona de inmediato y de forma obligatoria al subtask de "Cierre de Sesión" para despedirte del usuario y colgar físicamente. Tienes estrictamente **PROHIBIDO** realizar preguntas de validación, solicitar el RUT, pedir el nombre o evaluar intenciones de negocio en este estado.
+                - De lo contrario, evalúa la entrada del usuario:
+                  - Si el usuario hace una nueva pregunta: procesa la intención y realiza una transferencia silenciosa de inmediato al agente correspondiente, exactamente igual a como lo harías en una nueva interacción.
+                  - Si el usuario indica que no necesita más ayuda (ej: "no", "nada más"): Transiciona de inmediato al subtask de "Cierre de Sesión".
             </action>
         </step>
     </subtask>
