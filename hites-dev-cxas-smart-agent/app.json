@@ -125,6 +125,13 @@
       "type": "STRING",
       "default": ""
     }
+  }, {
+    "name": "vinculacion_log_impresa",
+    "description": "Bandera de control para evitar duplicar el log de vinculación inicial en re-entradas del agente",
+    "schema": {
+      "type": "STRING",
+      "default": "false"
+    }
   }],
   "dataStoreSettings": {
   },

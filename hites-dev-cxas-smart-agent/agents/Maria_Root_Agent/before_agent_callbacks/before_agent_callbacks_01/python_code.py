@@ -24,8 +24,10 @@ def before_agent_callback(
         except ValueError:
             id_llamada = str(callid_raw)
 
-    # 3. Imprimir el log de vinculación inicial. 
-    # Google Cloud Logging lo captura y lo indexa de inmediato de forma nativa.
-    print(f"[Success] Vinculación inicial para idLlamada: {id_llamada} y session_id: {session_id}")
+    # 3. Imprimir el log de vinculación inicial una sola vez al inicio de la interacción.
+    # Se usa un cerrojo (latch) en el estado de sesión para evitar duplicar el log en re-entradas.
+    if callback_context.state.get("vinculacion_log_impresa") != "true":
+        print(f"[Success] Vinculación inicial para idLlamada: {id_llamada} y session_id: {session_id}")
+        callback_context.state["vinculacion_log_impresa"] = "true"
     
     return None
