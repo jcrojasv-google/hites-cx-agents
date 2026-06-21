@@ -17,41 +17,17 @@
         "toolExpectation": {
           "expectedToolCall": {
             "tool": "valida_cliente_wrapper"
-          }
-        }
-      },
-      {
-        "toolExpectation": {
-          "expectedToolCall": {
-            "tool": "validarRut"
           },
           "mockToolResponse": {
-            "tool": "validarRut",
+            "tool": "valida_cliente_wrapper",
             "response": {
-              "session_info": {
-                "parameters": {
-                  "rut_valido": true
-                }
-              }
-            }
-          }
-        }
-      },
-      {
-        "toolExpectation": {
-          "expectedToolCall": {
-            "tool": "validarCliente"
-          },
-          "mockToolResponse": {
-            "tool": "validarCliente",
-            "response": {
-              "session_info": {
-                "parameters": {
-                  "es_cliente_hites": true,
-                  "nombreCliente": "Juan",
-                  "nombreCompletoCliente": "Juan Pérez",
-                  "codigoCliente": "987654"
-                }
+              "output": {
+                "rut": "144127633",
+                "rut_valido": "true",
+                "es_cliente_hites": "true",
+                "nombre_cliente": "Juan",
+                "nombre_completo_cliente": "Juan Pérez",
+                "codigo_cliente": "987654"
               }
             }
           }
@@ -69,10 +45,10 @@
       {
         "toolExpectation": {
           "expectedToolCall": {
-            "tool": "consultarSaldo"
+            "tool": "consulta_saldo_consultarSaldo"
           },
           "mockToolResponse": {
-            "tool": "consultarSaldo",
+            "tool": "consulta_saldo_consultarSaldo",
             "response": {
               "session_info": {
                 "parameters": {
